@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Mail, Twitter, Linkedin, Github, Globe } from 'lucide-react';
+import { Logo } from './Logo';
 
 const navigation = {
   product: [
@@ -38,12 +39,9 @@ export function Footer() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="flex items-center space-x-2 mb-4"
+              className="mb-6"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-[#2D6BFF] to-[#00C2A8] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
-              </div>
-              <span className="text-lg font-bold text-white">AFRIC-ANALYZER</span>
+              <Logo variant="text" size="sm" />
             </motion.div>
             <p className="text-[#6B7280] text-sm mb-6">
               Security intelligence built for modern African institutions and beyond.

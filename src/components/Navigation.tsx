@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { RequestAccessModal } from './RequestAccessModal';
+import { Logo } from './Logo';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,12 +19,8 @@ export function Navigation() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-2"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-[#2D6BFF] to-[#00C2A8] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
-              </div>
-              <span className="text-xl font-bold">AFRIC-ANALYZER</span>
+              <Logo variant="full" size="md" />
             </motion.div>
 
             {/* Desktop Navigation */}

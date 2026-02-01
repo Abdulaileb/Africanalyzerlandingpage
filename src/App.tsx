@@ -9,7 +9,6 @@ import { EmailCapture } from './components/EmailCapture';
 import { Footer } from './components/Footer';
 import { Navigation } from './components/Navigation';
 import { Toaster } from './components/ui/sonner';
-
 export default function App() {
   return (
     <div className="min-h-screen bg-[#0A0F1F] text-white">
@@ -24,6 +23,12 @@ export default function App() {
       <EmailCapture />
       <Footer />
       <Toaster />
-    </div>
+    </div>   
   );
 }
+
+// Temporary debug - remove after fixing
+console.log('ENV CHECK:', {
+  url: import.meta.env.VITE_SUPABASE_URL,
+  hasKey: !!import.meta.env.VITE_SUPABASE_ANON_KEY
+});

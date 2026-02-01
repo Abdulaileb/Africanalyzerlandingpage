@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Mail, CheckCircle, Loader2 } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
+import { submitWaitlistEmail } from '../lib/supabase';
 
 export function EmailCapture() {
   const [email, setEmail] = useState('');
@@ -18,9 +19,10 @@ export function EmailCapture() {
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Submit to Supabase
+      await submitWaitlistEmail(email);
+      
       setIsSubmitted(true);
       toast.success('Successfully joined the waitlist!');
       
@@ -29,7 +31,12 @@ export function EmailCapture() {
         setIsSubmitted(false);
         setEmail('');
       }, 3000);
-    }, 1500);
+    } catch (error) {
+      console.error('Error submitting to waitlist:', error);
+      toast.error('Failed to join waitlist. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -108,7 +115,7 @@ export function EmailCapture() {
 }
 
 function CountdownTimer() {
-  const targetDate = new Date('May 16, 2025 00:00:00').getTime();
+  const targetDate = new Date('February 15, 2026 00:00:00').getTime();
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   function calculateTimeLeft() {
@@ -148,7 +155,7 @@ function CountdownTimer() {
           Launching Public Beta
         </span>
       </h3>
-      <p className="text-lg text-[#6B7280] mb-8">May 16, 2025</p>
+      <p className="text-lg text-[#6B7280] mb-8">February 15, 2026</p>
 
       <div className="flex justify-center gap-4 lg:gap-8">
         <TimeUnit value={timeLeft.days} label="Days" />
@@ -182,3 +189,4 @@ function TimeUnit({ value, label }: { value: number; label: string }) {
     </div>
   );
 }
+

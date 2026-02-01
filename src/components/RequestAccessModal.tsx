@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, CheckCircle, Mail, User, Building2 } from 'lucide-react';
+import { submitFullAccessRequest } from '../lib/supabase';
+import { toast } from 'sonner';
 
 interface RequestAccessModalProps {
   isOpen: boolean;
@@ -15,6 +17,7 @@ export function RequestAccessModal({ isOpen, onClose }: RequestAccessModalProps)
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,17 +27,31 @@ export function RequestAccessModal({ isOpen, onClose }: RequestAccessModalProps)
     }
 
     setIsSubmitting(true);
+    setError(null);
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Submit to Supabase
+      await submitFullAccessRequest(
+        formData.email,
+        formData.name,
+        formData.organization
+      );
+      
       setIsSuccess(true);
-    }, 1500);
+      toast.success('Access request submitted successfully!');
+    } catch (err) {
+      console.error('Error submitting request:', err);
+      setError('Failed to submit request. Please try again.');
+      toast.error('Failed to submit request. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleClose = () => {
     setFormData({ name: '', email: '', organization: '' });
     setIsSuccess(false);
+    setError(null);
     onClose();
   };
 
@@ -81,6 +98,13 @@ export function RequestAccessModal({ isOpen, onClose }: RequestAccessModalProps)
 
                   {/* Form */}
                   <form onSubmit={handleSubmit} className="p-6 space-y-4">
+                    {/* Error Message */}
+                    {error && (
+                      <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg">
+                        <p className="text-sm text-red-400">{error}</p>
+                      </div>
+                    )}
+
                     {/* Name Field */}
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
@@ -96,6 +120,7 @@ export function RequestAccessModal({ isOpen, onClose }: RequestAccessModalProps)
                           placeholder="John Doe"
                           className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#6B7280] focus:outline-none focus:border-[#2D6BFF] transition-all"
                           required
+                          disabled={isSubmitting}
                         />
                       </div>
                     </div>
@@ -115,6 +140,7 @@ export function RequestAccessModal({ isOpen, onClose }: RequestAccessModalProps)
                           placeholder="john@company.com"
                           className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#6B7280] focus:outline-none focus:border-[#2D6BFF] transition-all"
                           required
+                          disabled={isSubmitting}
                         />
                       </div>
                     </div>
@@ -134,6 +160,7 @@ export function RequestAccessModal({ isOpen, onClose }: RequestAccessModalProps)
                           placeholder="Your University or Company"
                           className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#6B7280] focus:outline-none focus:border-[#2D6BFF] transition-all"
                           required
+                          disabled={isSubmitting}
                         />
                       </div>
                     </div>

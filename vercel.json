@@ -1,4 +1,6 @@
-{  
+{
   "framework": "vite",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "nodeVersion": "20.x"
 }

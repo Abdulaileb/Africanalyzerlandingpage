@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
-    "preview": "vite preview",
-    "vercel-build": "npx vite build"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",

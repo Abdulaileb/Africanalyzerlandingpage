@@ -9,6 +9,8 @@ import { EmailCapture } from './components/EmailCapture';
 import { Footer } from './components/Footer';
 import { Navigation } from './components/Navigation';
 import { Toaster } from './components/ui/sonner';
+import { Team } from './components/Team';
+
 export default function App() {
   return (
     <div className="min-h-screen bg-[#0A0F1F] text-white">
@@ -19,6 +21,7 @@ export default function App() {
       <Features />
       <PremiumAI />
       <UseCases />
+      <Team />        {/* Add this line */}
       <Pricing />
       <EmailCapture />
       <Footer />

@@ -289,13 +289,13 @@ __turbopack_context__.s([
     "supabase",
     ()=>supabase
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$supabase$2b$supabase$2d$js$40$2$2e$97$2e$0$2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/@supabase+supabase-js@2.97.0/node_modules/@supabase/supabase-js/dist/index.mjs [app-ssr] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$supabase$2b$supabase$2d$js$40$2$2e$99$2e$1$2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/@supabase+supabase-js@2.99.1/node_modules/@supabase/supabase-js/dist/index.mjs [app-ssr] (ecmascript) <locals>");
 ;
 const supabaseUrl = ("TURBOPACK compile-time value", "https://kgptbzspjtktsrhysgoi.supabase.co");
 const supabaseAnonKey = ("TURBOPACK compile-time value", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtncHRienNwanRrdHNyaHlzZ29pIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk4ODMxMDgsImV4cCI6MjA4NTQ1OTEwOH0.aQD82hEnRNtiAUlHoFMItxOrQgxbYqBcWRdgMH9GzhI");
 if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
 ;
-const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$supabase$2b$supabase$2d$js$40$2$2e$97$2e$0$2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createClient"])(supabaseUrl, supabaseAnonKey);
+const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$supabase$2b$supabase$2d$js$40$2$2e$99$2e$1$2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createClient"])(supabaseUrl, supabaseAnonKey);
 async function submitAccessRequest(data) {
     const { data: result, error } = await supabase.from('access_requests').insert([
         data
@@ -344,6 +344,382 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lu
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/circle-check-big.js [app-ssr] (ecmascript) <export default as CheckCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$sonner$40$1$2e$7$2e$4_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/sonner@1.7.4_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/sonner/dist/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/supabase.ts [app-ssr] (ecmascript)");
+// "use client"
+// import { useState, useEffect, useRef } from "react"
+// import { motion, useMotionValue, useTransform, useInView, animate } from "framer-motion"
+// import { ShieldCheck, TrendingUp, Bot, Loader2, CheckCircle } from "lucide-react"
+// import { toast } from "sonner"
+// import { submitWaitlistEmail } from "@/lib/supabase"
+// interface HeroProps {
+//   onRequestAccess: () => void
+// }
+// function AnimatedCounter({ value, prefix = "", suffix = "" }: { value: number; prefix?: string; suffix?: string }) {
+//   const ref = useRef<HTMLSpanElement>(null)
+//   const isInView = useInView(ref, { once: true })
+//   const [display, setDisplay] = useState("0")
+//   useEffect(() => {
+//     if (!isInView) return
+//     const controls = animate(0, value, {
+//       duration: 1.5,
+//       ease: "easeOut",
+//       onUpdate: (v) => setDisplay(Math.floor(v).toLocaleString()),
+//     })
+//     return controls.stop
+//   }, [isInView, value])
+//   return (
+//     <span ref={ref}>
+//       {prefix}{display}{suffix}
+//     </span>
+//   )
+// }
+// const stats = [
+//   { value: 38, prefix: "$", suffix: " billion", label: "24h log volume equivalent" },
+//   { value: 350, prefix: "", suffix: "+", label: "Log sources supported" },
+//   { value: 120, prefix: "", suffix: " million", label: "Events processed" },
+//   { value: 0, prefix: "<0.10", suffix: "%", label: "False positive rate", isStatic: true },
+// ]
+// const barHeights = [40, 65, 45, 80, 55, 90, 70]
+// const threatRows = [
+//   { label: "Suspicious Login", ip: "192.168.1.x", status: "Flagged", color: "#F59E0B", bg: "rgba(245,158,11,0.08)", border: "rgba(245,158,11,0.18)" },
+//   { label: "Brute Force Attempt", ip: "203.45.12.x", status: "Blocked", color: "#EF4444", bg: "rgba(239,68,68,0.08)", border: "rgba(239,68,68,0.18)" },
+//   { label: "Security Scan", ip: "Internal", status: "Resolved", color: "#0D9488", bg: "rgba(13,148,136,0.08)", border: "rgba(13,148,136,0.18)" },
+// ]
+// export default function Hero({ onRequestAccess }: HeroProps) {
+//   const [email, setEmail] = useState("")
+//   const [loading, setLoading] = useState(false)
+//   const [success, setSuccess] = useState(false)
+//   const mouseX = useMotionValue(0)
+//   const mouseY = useMotionValue(0)
+//   const bgX = useTransform(mouseX, [0, typeof window !== "undefined" ? window.innerWidth : 1400], [-12, 12])
+//   const bgY = useTransform(mouseY, [0, typeof window !== "undefined" ? window.innerHeight : 900], [-8, 8])
+//   const cardX = useTransform(mouseX, [0, typeof window !== "undefined" ? window.innerWidth : 1400], [8, -8])
+//   const cardY = useTransform(mouseY, [0, typeof window !== "undefined" ? window.innerHeight : 900], [5, -5])
+//   const handleMouseMove = (e: React.MouseEvent) => {
+//     mouseX.set(e.clientX)
+//     mouseY.set(e.clientY)
+//   }
+//   const handleEmailSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault()
+//     if (!email) return
+//     setLoading(true)
+//     try {
+//       await submitWaitlistEmail(email)
+//       setSuccess(true)
+//       toast.success("Successfully joined the waitlist!")
+//       setEmail("")
+//       setTimeout(() => setSuccess(false), 3000)
+//     } catch {
+//       toast.error("Failed to submit. Please try again.")
+//     } finally {
+//       setLoading(false)
+//     }
+//   }
+//   return (
+//     <section
+//       className="relative overflow-hidden"
+//       style={{ backgroundColor: "#03070F" }}
+//       onMouseMove={handleMouseMove}
+//     >
+//       {/* Background layers */}
+//       <motion.div
+//         className="pointer-events-none absolute inset-0"
+//         style={{ x: bgX, y: bgY }}
+//       >
+//         <div
+//           className="absolute inset-0"
+//           style={{
+//             background: "radial-gradient(ellipse 60% 50% at 75% 10%, rgba(37,99,235,0.18) 0%, transparent 70%)",
+//           }}
+//         />
+//         <div
+//           className="absolute inset-0"
+//           style={{
+//             background: "radial-gradient(ellipse 40% 40% at 20% 90%, rgba(13,148,136,0.08) 0%, transparent 65%)",
+//           }}
+//         />
+//         <div
+//           className="absolute inset-0"
+//           style={{
+//             backgroundImage: "radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)",
+//             backgroundSize: "28px 28px",
+//           }}
+//         />
+//       </motion.div>
+//       {/* Main content */}
+//       <div className="relative mx-auto grid max-w-[1200px] gap-12 px-6 pt-36 pb-0 lg:grid-cols-2 lg:items-center lg:gap-8 lg:pt-[140px]">
+//         {/* Left column */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 40 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+//         >
+//           {/* Eyebrow */}
+//           <div
+//             className="mb-7 inline-flex items-center gap-2 rounded-full px-3.5 py-1.5"
+//             style={{
+//               border: "1px solid rgba(37,99,235,0.35)",
+//               background: "rgba(37,99,235,0.08)",
+//             }}
+//           >
+//             <ShieldCheck className="h-3.5 w-3.5" style={{ color: "#2563EB" }} />
+//             <span className="text-xs font-semibold tracking-[0.03em]" style={{ color: "rgba(255,255,255,0.75)" }}>
+//               Security Intelligence Platform
+//             </span>
+//           </div>
+//           {/* Headline */}
+//           <h1
+//             className="mb-6 text-balance"
+//             style={{
+//               fontSize: "clamp(3rem, 6.5vw, 5.5rem)",
+//               fontWeight: 900,
+//               letterSpacing: "-0.045em",
+//               lineHeight: 0.92,
+//               color: "white",
+//             }}
+//           >
+//             Unlock Your
+//             <br />
+//             <span style={{ color: "#2563EB" }}>Security</span>
+//             <br />
+//             Potential
+//           </h1>
+//           {/* Sub-headline */}
+//           <p
+//             className="mb-9 max-w-[440px]"
+//             style={{
+//               fontSize: "1.05rem",
+//               color: "rgba(255,255,255,0.52)",
+//               lineHeight: 1.75,
+//             }}
+//           >
+//             With real-time log analysis and AI-powered threat detection, you can
+//             monitor your infrastructure and quickly respond to threats — built
+//             for African institutions.
+//           </p>
+//           {/* CTA block */}
+//           <div className="flex flex-col gap-3">
+//             <motion.button
+//               onClick={onRequestAccess}
+//               className="w-fit rounded-[10px] border-none px-7 py-3.5 text-[15px] font-bold text-white"
+//               style={{
+//                 backgroundColor: "#2563EB",
+//                 boxShadow: "0 0 24px rgba(37,99,235,0.35)",
+//               }}
+//               whileHover={{
+//                 boxShadow: "0 0 40px rgba(37,99,235,0.55), 0 0 80px rgba(37,99,235,0.2)",
+//                 scale: 1.03,
+//               }}
+//               whileTap={{ scale: 0.97 }}
+//               transition={{ duration: 0.15 }}
+//             >
+//               Request Early Access
+//             </motion.button>
+//             {/* Inline email form */}
+//             <form onSubmit={handleEmailSubmit} className="flex max-w-[400px]">
+//               <input
+//                 type="email"
+//                 value={email}
+//                 onChange={(e) => setEmail(e.target.value)}
+//                 placeholder="Enter your work email"
+//                 className="w-[260px] rounded-l-[10px] rounded-r-none px-4 py-3 text-sm text-white placeholder:text-white/35 focus:outline-none"
+//                 style={{
+//                   background: "rgba(255,255,255,0.07)",
+//                   border: "1px solid rgba(255,255,255,0.14)",
+//                   borderRight: "none",
+//                 }}
+//                 onFocus={(e) => (e.target.style.borderColor = "#2563EB")}
+//                 onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.14)")}
+//               />
+//               <button
+//                 type="submit"
+//                 disabled={loading || success}
+//                 className="flex items-center gap-1.5 rounded-r-[10px] rounded-l-none px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/[0.18]"
+//                 style={{
+//                   background: "rgba(255,255,255,0.12)",
+//                   border: "1px solid rgba(255,255,255,0.14)",
+//                   borderLeft: "none",
+//                 }}
+//               >
+//                 {loading ? (
+//                   <Loader2 className="h-4 w-4 animate-spin" />
+//                 ) : success ? (
+//                   <>
+//                     <CheckCircle className="h-4 w-4" style={{ color: "#0D9488" }} />
+//                     <span>Done</span>
+//                   </>
+//                 ) : (
+//                   "Get Access \u2192"
+//                 )}
+//               </button>
+//             </form>
+//             <p className="mt-1 text-xs" style={{ color: "rgba(255,255,255,0.3)" }}>
+//               No credit card required &middot; Limited early-access seats available
+//             </p>
+//           </div>
+//         </motion.div>
+//         {/* Right column - Card stack */}
+//         <motion.div
+//           className="relative hidden h-[480px] lg:block"
+//           style={{ x: cardX, y: cardY }}
+//         >
+//           {/* Card A - back */}
+//           <motion.div
+//             className="absolute right-12 top-0 w-[200px] rounded-[14px] p-4"
+//             style={{
+//               backgroundColor: "#0D1526",
+//               border: "1px solid rgba(255,255,255,0.08)",
+//             }}
+//             initial={{ opacity: 0, rotate: -6, y: 48, scale: 0.92 }}
+//             animate={{ opacity: 0.4, rotate: -5, y: 32, scale: 0.92 }}
+//             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+//           >
+//             <p className="text-[11px]" style={{ color: "rgba(255,255,255,0.45)" }}>
+//               Total Threats Blocked
+//             </p>
+//             <p className="mt-1 text-[28px] font-black text-white">1,247</p>
+//             <div className="mt-1 flex items-center gap-1">
+//               <TrendingUp className="h-3 w-3" style={{ color: "#0D9488" }} />
+//               <span className="text-[11px]" style={{ color: "#0D9488" }}>
+//                 +12% this week
+//               </span>
+//             </div>
+//           </motion.div>
+//           {/* Card B - mid */}
+//           <motion.div
+//             className="absolute right-0 top-10 w-[260px] rounded-[14px] p-[18px]"
+//             style={{
+//               backgroundColor: "#0D1526",
+//               border: "1px solid rgba(255,255,255,0.1)",
+//             }}
+//             initial={{ opacity: 0, rotate: -3, y: 24, scale: 0.96 }}
+//             animate={{ opacity: 0.65, rotate: -2.5, y: 16, scale: 0.96 }}
+//             transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+//           >
+//             <div className="flex items-center justify-between">
+//               <span className="text-xs" style={{ color: "rgba(255,255,255,0.55)" }}>Log Activity</span>
+//               <span className="text-[11px]" style={{ color: "rgba(255,255,255,0.3)" }}>Last 7 days</span>
+//             </div>
+//             <div className="mt-3 flex items-end gap-1" style={{ height: 48 }}>
+//               {barHeights.map((h, i) => (
+//                 <div
+//                   key={i}
+//                   className="w-2 rounded-t-[3px]"
+//                   style={{
+//                     height: `${h}%`,
+//                     backgroundColor: "#2563EB",
+//                   }}
+//                 />
+//               ))}
+//             </div>
+//             <p className="mt-2 text-lg font-bold text-white">89.2K events</p>
+//           </motion.div>
+//           {/* Card C - front */}
+//           <motion.div
+//             className="absolute right-[-20px] top-[60px] z-10 w-[320px] rounded-2xl p-[22px]"
+//             style={{
+//               backgroundColor: "#0D1526",
+//               border: "1px solid rgba(255,255,255,0.1)",
+//               boxShadow: "0 48px 100px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.07)",
+//             }}
+//             initial={{ opacity: 0, y: 32, scale: 0.95 }}
+//             animate={{ opacity: 1, y: 0, scale: 1 }}
+//             transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+//           >
+//             <div className="mb-4 flex items-center justify-between">
+//               <span className="text-sm font-bold text-white">Live Threat Monitor</span>
+//               <div className="flex items-center gap-1.5">
+//                 <div
+//                   className="h-1.5 w-1.5 rounded-full animate-pulse-dot"
+//                   style={{ backgroundColor: "#10B981" }}
+//                 />
+//                 <span className="text-[11px]" style={{ color: "#0D9488" }}>Live</span>
+//               </div>
+//             </div>
+//             <div className="flex flex-col gap-2.5">
+//               {threatRows.map((row, i) => (
+//                 <div
+//                   key={i}
+//                   className="flex items-center gap-2.5 rounded-lg px-3 py-2.5"
+//                   style={{
+//                     backgroundColor: row.bg,
+//                     border: `1px solid ${row.border}`,
+//                   }}
+//                 >
+//                   <div className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: row.color }} />
+//                   <span className="flex-1 text-[13px] text-white">{row.label}</span>
+//                   <span className="text-[11px]" style={{ color: "rgba(255,255,255,0.4)" }}>{row.ip}</span>
+//                   <span className="text-[10px] font-medium" style={{ color: row.color }}>{row.status}</span>
+//                 </div>
+//               ))}
+//             </div>
+//           </motion.div>
+//           {/* Floating badge */}
+//           <motion.div
+//             className="absolute bottom-[-20px] left-5 z-20 flex items-center gap-3 rounded-xl px-4 py-3"
+//             style={{
+//               backgroundColor: "#2563EB",
+//               boxShadow: "0 8px 24px rgba(37,99,235,0.4), 0 0 0 1px rgba(255,255,255,0.12)",
+//             }}
+//             initial={{ opacity: 0, y: 20, scale: 0.85 }}
+//             animate={{ opacity: 1, y: 0, scale: 1 }}
+//             transition={{ type: "spring", stiffness: 160, damping: 18, delay: 1.2 }}
+//           >
+//             <div
+//               className="flex h-9 w-9 items-center justify-center rounded-full"
+//               style={{ background: "rgba(255,255,255,0.15)" }}
+//             >
+//               <Bot className="h-[18px] w-[18px] text-white" />
+//             </div>
+//             <div>
+//               <p className="text-[10px] font-semibold uppercase tracking-[0.08em]" style={{ color: "rgba(255,255,255,0.65)" }}>
+//                 AI Assistant
+//               </p>
+//               <p className="text-[13px] font-bold text-white">Ready to analyze</p>
+//             </div>
+//           </motion.div>
+//         </motion.div>
+//       </div>
+//       {/* Stats bar */}
+//       <div
+//         className="mt-12 lg:mt-0"
+//         style={{
+//           backgroundColor: "#070D1A",
+//           borderTop: "1px solid rgba(255,255,255,0.07)",
+//         }}
+//       >
+//         <div className="mx-auto grid max-w-[1200px] grid-cols-2 lg:grid-cols-4">
+//           {stats.map((stat, i) => (
+//             <div
+//               key={i}
+//               className="py-9 text-center"
+//               style={{
+//                 borderRight: i < stats.length - 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
+//               }}
+//             >
+//               <p
+//                 className="text-white"
+//                 style={{
+//                   fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+//                   fontWeight: 900,
+//                   letterSpacing: "-0.04em",
+//                 }}
+//               >
+//                 {stat.isStatic ? (
+//                   <>{stat.prefix}{stat.suffix}</>
+//                 ) : (
+//                   <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
+//                 )}
+//               </p>
+//               <p className="mt-1 text-[13px]" style={{ color: "rgba(255,255,255,0.4)" }}>
+//                 {stat.label}
+//               </p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
 "use client";
 ;
 ;
@@ -378,34 +754,38 @@ function AnimatedCounter({ value, prefix = "", suffix = "" }) {
         ]
     }, void 0, true, {
         fileName: "[project]/components/hero.tsx",
-        lineNumber: 29,
+        lineNumber: 430,
         columnNumber: 5
     }, this);
 }
 const stats = [
     {
-        value: 38,
-        prefix: "$",
-        suffix: " billion",
-        label: "24h log volume equivalent"
+        value: 0,
+        prefix: "",
+        suffix: "",
+        label: "Live pilot running with a West African university",
+        isStatic: true,
+        staticDisplay: "🟢 Live"
     },
     {
-        value: 350,
+        value: 1000,
         prefix: "",
         suffix: "+",
-        label: "Log sources supported"
-    },
-    {
-        value: 120,
-        prefix: "",
-        suffix: " million",
-        label: "Events processed"
+        label: "Security events analysed in first week"
     },
     {
         value: 0,
-        prefix: "<0.10",
-        suffix: "%",
-        label: "False positive rate",
+        prefix: "",
+        suffix: "",
+        label: "Built by MSc AI & Cybersecurity engineers in Austria & Italy",
+        isStatic: true,
+        staticDisplay: "🎓 MSc"
+    },
+    {
+        value: 0,
+        prefix: "<30",
+        suffix: " min",
+        label: "Average setup time from signup to first alert",
         isStatic: true
     }
 ];
@@ -519,7 +899,7 @@ function Hero({ onRequestAccess }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/hero.tsx",
-                        lineNumber: 96,
+                        lineNumber: 497,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -529,7 +909,7 @@ function Hero({ onRequestAccess }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/hero.tsx",
-                        lineNumber: 102,
+                        lineNumber: 503,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -540,13 +920,13 @@ function Hero({ onRequestAccess }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/hero.tsx",
-                        lineNumber: 108,
+                        lineNumber: 509,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/hero.tsx",
-                lineNumber: 92,
+                lineNumber: 493,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -585,7 +965,7 @@ function Hero({ onRequestAccess }) {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 133,
+                                        lineNumber: 534,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -596,51 +976,51 @@ function Hero({ onRequestAccess }) {
                                         children: "Security Intelligence Platform"
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 134,
+                                        lineNumber: 535,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/hero.tsx",
-                                lineNumber: 126,
+                                lineNumber: 527,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                 className: "mb-6 text-balance",
                                 style: {
-                                    fontSize: "clamp(3rem, 6.5vw, 5.5rem)",
+                                    fontSize: "clamp(2.6rem, 5.5vw, 4.8rem)",
                                     fontWeight: 900,
-                                    letterSpacing: "-0.045em",
-                                    lineHeight: 0.92,
+                                    letterSpacing: "-0.04em",
+                                    lineHeight: 0.95,
                                     color: "white"
                                 },
                                 children: [
-                                    "Unlock Your",
+                                    "Security visibility,",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 151,
+                                        lineNumber: 552,
+                                        columnNumber: 13
+                                    }, this),
+                                    "finally built for",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                        fileName: "[project]/components/hero.tsx",
+                                        lineNumber: 554,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         style: {
                                             color: "#2563EB"
                                         },
-                                        children: "Security"
+                                        children: "SMEs & universities"
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 152,
+                                        lineNumber: 555,
                                         columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                        fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 153,
-                                        columnNumber: 13
-                                    }, this),
-                                    "Potential"
+                                    }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/hero.tsx",
-                                lineNumber: 140,
+                                lineNumber: 541,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -650,10 +1030,10 @@ function Hero({ onRequestAccess }) {
                                     color: "rgba(255,255,255,0.52)",
                                     lineHeight: 1.75
                                 },
-                                children: "With real-time log analysis and AI-powered threat detection, you can monitor your infrastructure and quickly respond to threats — built for African institutions."
+                                children: "AfricAnalyzer collects your firewall, Windows, and cloud logs into one dashboard and uses AI to highlight real attacks — so SMEs and universities can detect threats in minutes, not weeks."
                             }, void 0, false, {
                                 fileName: "[project]/components/hero.tsx",
-                                lineNumber: 158,
+                                lineNumber: 559,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -679,7 +1059,7 @@ function Hero({ onRequestAccess }) {
                                         children: "Request Early Access"
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 173,
+                                        lineNumber: 574,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -701,7 +1081,7 @@ function Hero({ onRequestAccess }) {
                                                 onBlur: (e)=>e.target.style.borderColor = "rgba(255,255,255,0.14)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 192,
+                                                lineNumber: 593,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -717,7 +1097,7 @@ function Hero({ onRequestAccess }) {
                                                     className: "h-4 w-4 animate-spin"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/hero.tsx",
-                                                    lineNumber: 217,
+                                                    lineNumber: 618,
                                                     columnNumber: 19
                                                 }, this) : success ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                                     children: [
@@ -728,27 +1108,27 @@ function Hero({ onRequestAccess }) {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/hero.tsx",
-                                                            lineNumber: 220,
+                                                            lineNumber: 621,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: "Done"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/hero.tsx",
-                                                            lineNumber: 221,
+                                                            lineNumber: 622,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
-                                                }, void 0, true) : "Get Access \u2192"
+                                                }, void 0, true) : "Get a 30-Minute Demo →"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 206,
+                                                lineNumber: 607,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 191,
+                                        lineNumber: 592,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -756,22 +1136,22 @@ function Hero({ onRequestAccess }) {
                                         style: {
                                             color: "rgba(255,255,255,0.3)"
                                         },
-                                        children: "No credit card required · Limited early-access seats available"
+                                        children: "No credit card required · Limited early-access seats for pilots"
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 229,
+                                        lineNumber: 630,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/hero.tsx",
-                                lineNumber: 172,
+                                lineNumber: 573,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/hero.tsx",
-                        lineNumber: 120,
+                        lineNumber: 521,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -818,7 +1198,7 @@ function Hero({ onRequestAccess }) {
                                         children: "Total Threats Blocked"
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 251,
+                                        lineNumber: 652,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -826,7 +1206,7 @@ function Hero({ onRequestAccess }) {
                                         children: "1,247"
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 254,
+                                        lineNumber: 655,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -839,7 +1219,7 @@ function Hero({ onRequestAccess }) {
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 256,
+                                                lineNumber: 657,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -850,19 +1230,19 @@ function Hero({ onRequestAccess }) {
                                                 children: "+12% this week"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 257,
+                                                lineNumber: 658,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 255,
+                                        lineNumber: 656,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/hero.tsx",
-                                lineNumber: 241,
+                                lineNumber: 642,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -905,7 +1285,7 @@ function Hero({ onRequestAccess }) {
                                                 children: "Log Activity"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 275,
+                                                lineNumber: 676,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -916,13 +1296,13 @@ function Hero({ onRequestAccess }) {
                                                 children: "Last 7 days"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 276,
+                                                lineNumber: 677,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 274,
+                                        lineNumber: 675,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -938,12 +1318,12 @@ function Hero({ onRequestAccess }) {
                                                 }
                                             }, i, false, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 280,
+                                                lineNumber: 681,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 278,
+                                        lineNumber: 679,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -951,13 +1331,13 @@ function Hero({ onRequestAccess }) {
                                         children: "89.2K events"
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 290,
+                                        lineNumber: 691,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/hero.tsx",
-                                lineNumber: 264,
+                                lineNumber: 665,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -996,7 +1376,7 @@ function Hero({ onRequestAccess }) {
                                                 children: "Live Threat Monitor"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 306,
+                                                lineNumber: 707,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1009,7 +1389,7 @@ function Hero({ onRequestAccess }) {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/hero.tsx",
-                                                        lineNumber: 308,
+                                                        lineNumber: 709,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1020,19 +1400,19 @@ function Hero({ onRequestAccess }) {
                                                         children: "Live"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/hero.tsx",
-                                                        lineNumber: 312,
+                                                        lineNumber: 713,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 307,
+                                                lineNumber: 708,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 305,
+                                        lineNumber: 706,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1051,7 +1431,7 @@ function Hero({ onRequestAccess }) {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/hero.tsx",
-                                                        lineNumber: 325,
+                                                        lineNumber: 726,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1059,7 +1439,7 @@ function Hero({ onRequestAccess }) {
                                                         children: row.label
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/hero.tsx",
-                                                        lineNumber: 326,
+                                                        lineNumber: 727,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1070,7 +1450,7 @@ function Hero({ onRequestAccess }) {
                                                         children: row.ip
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/hero.tsx",
-                                                        lineNumber: 327,
+                                                        lineNumber: 728,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1081,24 +1461,24 @@ function Hero({ onRequestAccess }) {
                                                         children: row.status
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/hero.tsx",
-                                                        lineNumber: 328,
+                                                        lineNumber: 729,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, i, true, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 317,
+                                                lineNumber: 718,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 315,
+                                        lineNumber: 716,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/hero.tsx",
-                                lineNumber: 294,
+                                lineNumber: 695,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1133,12 +1513,12 @@ function Hero({ onRequestAccess }) {
                                             className: "h-[18px] w-[18px] text-white"
                                         }, void 0, false, {
                                             fileName: "[project]/components/hero.tsx",
-                                            lineNumber: 349,
+                                            lineNumber: 750,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 345,
+                                        lineNumber: 746,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1151,7 +1531,7 @@ function Hero({ onRequestAccess }) {
                                                 children: "AI Assistant"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 352,
+                                                lineNumber: 753,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1159,31 +1539,31 @@ function Hero({ onRequestAccess }) {
                                                 children: "Ready to analyze"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/hero.tsx",
-                                                lineNumber: 355,
+                                                lineNumber: 756,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 351,
+                                        lineNumber: 752,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/hero.tsx",
-                                lineNumber: 335,
+                                lineNumber: 736,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/hero.tsx",
-                        lineNumber: 236,
+                        lineNumber: 637,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/hero.tsx",
-                lineNumber: 118,
+                lineNumber: 519,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1195,7 +1575,7 @@ function Hero({ onRequestAccess }) {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mx-auto grid max-w-[1200px] grid-cols-2 lg:grid-cols-4",
                     children: stats.map((stat, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "py-9 text-center",
+                            className: "py-9 text-center px-4",
                             style: {
                                 borderRight: i < stats.length - 1 ? "1px solid rgba(255,255,255,0.07)" : "none"
                             },
@@ -1203,60 +1583,57 @@ function Hero({ onRequestAccess }) {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-white",
                                     style: {
-                                        fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+                                        fontSize: "clamp(1.2rem, 2.5vw, 1.9rem)",
                                         fontWeight: 900,
-                                        letterSpacing: "-0.04em"
+                                        letterSpacing: "-0.03em"
                                     },
                                     children: stat.isStatic ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
-                                        children: [
-                                            stat.prefix,
-                                            stat.suffix
-                                        ]
-                                    }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AnimatedCounter, {
+                                        children: stat.staticDisplay ?? `${stat.prefix}${stat.suffix}`
+                                    }, void 0, false) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(AnimatedCounter, {
                                         value: stat.value,
                                         prefix: stat.prefix,
                                         suffix: stat.suffix
                                     }, void 0, false, {
                                         fileName: "[project]/components/hero.tsx",
-                                        lineNumber: 389,
+                                        lineNumber: 790,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/hero.tsx",
-                                    lineNumber: 378,
+                                    lineNumber: 779,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "mt-1 text-[13px]",
+                                    className: "mt-1 text-[12px] leading-snug",
                                     style: {
                                         color: "rgba(255,255,255,0.4)"
                                     },
                                     children: stat.label
                                 }, void 0, false, {
                                     fileName: "[project]/components/hero.tsx",
-                                    lineNumber: 392,
+                                    lineNumber: 793,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, i, true, {
                             fileName: "[project]/components/hero.tsx",
-                            lineNumber: 371,
+                            lineNumber: 772,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/hero.tsx",
-                    lineNumber: 369,
+                    lineNumber: 770,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/hero.tsx",
-                lineNumber: 362,
+                lineNumber: 763,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/hero.tsx",
-        lineNumber: 86,
+        lineNumber: 487,
         columnNumber: 5
     }, this);
 }
@@ -1270,64 +1647,108 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.1.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/framer-motion@11.18.2_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/globe.js [app-ssr] (ecmascript) <export default as Globe>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$graduation$2d$cap$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__GraduationCap$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/graduation-cap.js [app-ssr] (ecmascript) <export default as GraduationCap>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/building-2.js [app-ssr] (ecmascript) <export default as Building2>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$landmark$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Landmark$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/landmark.js [app-ssr] (ecmascript) <export default as Landmark>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$smartphone$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Smartphone$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/smartphone.js [app-ssr] (ecmascript) <export default as Smartphone>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$radio$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Radio$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/radio.js [app-ssr] (ecmascript) <export default as Radio>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/file-text.js [app-ssr] (ecmascript) <export default as FileText>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/shield-check.js [app-ssr] (ecmascript) <export default as ShieldCheck>");
+// "use client"
+// import { motion } from "framer-motion"
+// import { Globe, Building2, Landmark, Smartphone, Radio, FileText } from "lucide-react"
+// const orgs = [
+//   { name: "University of Sierra Leone", icon: Globe },
+//   { name: "Njala University", icon: Globe },
+//   { name: "Rokel Commercial Bank", icon: Landmark },
+//   { name: "Orange SL", icon: Smartphone },
+//   { name: "NTC Sierra Leone", icon: Radio },
+//   { name: "Ministry of Information", icon: Building2 },
+//   { name: "University of Sierra Leone", icon: Globe },
+//   { name: "Njala University", icon: Globe },
+//   { name: "Rokel Commercial Bank", icon: Landmark },
+//   { name: "Orange SL", icon: Smartphone },
+//   { name: "NTC Sierra Leone", icon: Radio },
+//   { name: "Ministry of Information", icon: FileText },
+// ]
+// export default function TrustedBy() {
+//   return (
+//     <section style={{ backgroundColor: "#070D1A" }} className="py-10">
+//       <div className="mx-auto max-w-[1200px] px-6">
+//         {/* Divider label */}
+//         <motion.div
+//           className="flex items-center gap-4"
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6 }}
+//         >
+//           <div className="h-px flex-1" style={{ background: "rgba(255,255,255,0.08)" }} />
+//           <span
+//             className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.08em]"
+//             style={{ color: "rgba(255,255,255,0.3)" }}
+//           >
+//             Trusted by 2,000+ organizations
+//           </span>
+//           <div className="h-px flex-1" style={{ background: "rgba(255,255,255,0.08)" }} />
+//         </motion.div>
+//         {/* Marquee */}
+//         <div className="mt-7 overflow-hidden">
+//           <div className="animate-marquee flex gap-4" style={{ width: "max-content" }}>
+//             {[...orgs, ...orgs].map((org, i) => {
+//               const Icon = org.icon
+//               return (
+//                 <div
+//                   key={i}
+//                   className="flex shrink-0 items-center gap-2 rounded-full px-5 py-2"
+//                   style={{
+//                     background: "rgba(255,255,255,0.05)",
+//                     border: "1px solid rgba(255,255,255,0.08)",
+//                   }}
+//                 >
+//                   <Icon className="h-4 w-4" style={{ color: "#2563EB" }} />
+//                   <span className="whitespace-nowrap text-[13px] font-medium" style={{ color: "rgba(255,255,255,0.55)" }}>
+//                     {org.name}
+//                   </span>
+//                 </div>
+//               )
+//             })}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
 "use client";
 ;
 ;
 ;
-const orgs = [
+const earlyAdopters = [
     {
-        name: "University of Sierra Leone",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__["Globe"]
+        name: "Higher Education",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$graduation$2d$cap$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__GraduationCap$3e$__["GraduationCap"],
+        detail: "West African university pilot"
     },
     {
-        name: "Njala University",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__["Globe"]
+        name: "SMEs",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__["Building2"],
+        detail: "Early-stage validation partners"
     },
     {
-        name: "Rokel Commercial Bank",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$landmark$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Landmark$3e$__["Landmark"]
+        name: "Security Teams",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__["ShieldCheck"],
+        detail: "MSP pilot programme"
     },
     {
-        name: "Orange SL",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$smartphone$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Smartphone$3e$__["Smartphone"]
+        name: "Higher Education",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$graduation$2d$cap$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__GraduationCap$3e$__["GraduationCap"],
+        detail: "West African university pilot"
     },
     {
-        name: "NTC Sierra Leone",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$radio$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Radio$3e$__["Radio"]
+        name: "SMEs",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__["Building2"],
+        detail: "Early-stage validation partners"
     },
     {
-        name: "Ministry of Information",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__["Building2"]
-    },
-    {
-        name: "University of Sierra Leone",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__["Globe"]
-    },
-    {
-        name: "Njala University",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__["Globe"]
-    },
-    {
-        name: "Rokel Commercial Bank",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$landmark$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Landmark$3e$__["Landmark"]
-    },
-    {
-        name: "Orange SL",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$smartphone$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Smartphone$3e$__["Smartphone"]
-    },
-    {
-        name: "NTC Sierra Leone",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$radio$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Radio$3e$__["Radio"]
-    },
-    {
-        name: "Ministry of Information",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__["FileText"]
+        name: "Security Teams",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__["ShieldCheck"],
+        detail: "MSP pilot programme"
     }
 ];
 function TrustedBy() {
@@ -1361,7 +1782,7 @@ function TrustedBy() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/components/trusted-by.tsx",
-                            lineNumber: 33,
+                            lineNumber: 99,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1369,10 +1790,10 @@ function TrustedBy() {
                             style: {
                                 color: "rgba(255,255,255,0.3)"
                             },
-                            children: "Trusted by 2,000+ organizations"
+                            children: "Trusted by our early adopters in higher education and SMEs"
                         }, void 0, false, {
                             fileName: "[project]/components/trusted-by.tsx",
-                            lineNumber: 34,
+                            lineNumber: 100,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1382,13 +1803,13 @@ function TrustedBy() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/components/trusted-by.tsx",
-                            lineNumber: 40,
+                            lineNumber: 106,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/trusted-by.tsx",
-                    lineNumber: 26,
+                    lineNumber: 92,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1399,12 +1820,12 @@ function TrustedBy() {
                             width: "max-content"
                         },
                         children: [
-                            ...orgs,
-                            ...orgs
+                            ...earlyAdopters,
+                            ...earlyAdopters
                         ].map((org, i)=>{
                             const Icon = org.icon;
                             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex shrink-0 items-center gap-2 rounded-full px-5 py-2",
+                                className: "flex shrink-0 items-center gap-2.5 rounded-full px-5 py-2.5",
                                 style: {
                                     background: "rgba(255,255,255,0.05)",
                                     border: "1px solid rgba(255,255,255,0.08)"
@@ -1417,46 +1838,68 @@ function TrustedBy() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/components/trusted-by.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 123,
                                         columnNumber: 19
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "whitespace-nowrap text-[13px] font-medium",
-                                        style: {
-                                            color: "rgba(255,255,255,0.55)"
-                                        },
-                                        children: org.name
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "whitespace-nowrap text-[13px] font-semibold",
+                                                style: {
+                                                    color: "rgba(255,255,255,0.7)"
+                                                },
+                                                children: org.name
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/trusted-by.tsx",
+                                                lineNumber: 125,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "ml-2 text-[11px]",
+                                                style: {
+                                                    color: "rgba(255,255,255,0.35)"
+                                                },
+                                                children: [
+                                                    "· ",
+                                                    org.detail
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/trusted-by.tsx",
+                                                lineNumber: 128,
+                                                columnNumber: 21
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/components/trusted-by.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 124,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, i, true, {
                                 fileName: "[project]/components/trusted-by.tsx",
-                                lineNumber: 49,
+                                lineNumber: 115,
                                 columnNumber: 17
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/components/trusted-by.tsx",
-                        lineNumber: 45,
+                        lineNumber: 111,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/trusted-by.tsx",
-                    lineNumber: 44,
+                    lineNumber: 110,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/trusted-by.tsx",
-            lineNumber: 24,
+            lineNumber: 90,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/trusted-by.tsx",
-        lineNumber: 23,
+        lineNumber: 89,
         columnNumber: 5
     }, this);
 }
@@ -1477,6 +1920,215 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lu
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bell$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Bell$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/bell.js [app-ssr] (ecmascript) <export default as Bell>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$message$2d$square$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__MessageSquare$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/message-square.js [app-ssr] (ecmascript) <export default as MessageSquare>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/send.js [app-ssr] (ecmascript) <export default as Send>");
+// "use client"
+// import { motion } from "framer-motion"
+// import { Link2, Activity, Bot, Shield, Bell, MessageSquare, Send } from "lucide-react"
+// const steps = [
+//   {
+//     number: "01",
+//     tag: "CONNECT",
+//     title: "Sign Up and Connect",
+//     body: "Create your account in minutes and connect your log sources via API or our lightweight agent. No complex infrastructure needed. Get running in under 10 minutes.",
+//     mockup: "welcome",
+//   },
+//   {
+//     number: "02",
+//     tag: "MONITOR",
+//     title: "Monitor in Real Time",
+//     body: "Watch threats, anomalies, and system health surface instantly on your live dashboard. Alerts reach you the moment something needs attention.",
+//     mockup: "feed",
+//   },
+//   {
+//     number: "03",
+//     tag: "INVESTIGATE",
+//     title: "Investigate with AI",
+//     body: "Ask questions in plain language. The AI assistant summarizes incidents, suggests responses, and generates detailed reports automatically.",
+//     mockup: "chat",
+//   },
+// ]
+// function MockupWelcome() {
+//   return (
+//     <div className="rounded-[14px] p-6" style={{ backgroundColor: "#0D1526", border: "1px solid rgba(0,0,0,0.08)", boxShadow: "0 24px 60px rgba(0,0,0,0.12)" }}>
+//       {/* Window chrome */}
+//       <div className="mb-4 flex items-center gap-1.5">
+//         <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#EF4444" }} />
+//         <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#F59E0B" }} />
+//         <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#10B981" }} />
+//       </div>
+//       <div className="flex items-center gap-3 rounded-xl p-4" style={{ background: "rgba(37,99,235,0.08)", border: "1px solid rgba(37,99,235,0.15)" }}>
+//         <div className="flex h-10 w-10 items-center justify-center rounded-lg" style={{ backgroundColor: "#2563EB" }}>
+//           <Shield className="h-5 w-5 text-white" />
+//         </div>
+//         <div>
+//           <p className="text-sm font-bold text-white">Welcome to Afric-Analyzer</p>
+//           <p className="text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>Connect your first log source to get started</p>
+//         </div>
+//       </div>
+//       <div className="mt-4 space-y-2">
+//         {[{ label: "API Integration", icon: Link2 }, { label: "Lightweight Agent", icon: Activity }].map((item, i) => (
+//           <div key={i} className="flex items-center gap-3 rounded-lg p-3" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+//             <item.icon className="h-4 w-4" style={{ color: "#2563EB" }} />
+//             <span className="text-[13px] text-white">{item.label}</span>
+//             <span className="ml-auto text-[11px]" style={{ color: "rgba(255,255,255,0.3)" }}>Configure &rarr;</span>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   )
+// }
+// function MockupFeed() {
+//   const events = [
+//     { label: "Brute Force Detected", time: "2m ago", color: "#EF4444" },
+//     { label: "New Login from Nigeria", time: "5m ago", color: "#F59E0B" },
+//     { label: "System Scan Complete", time: "12m ago", color: "#0D9488" },
+//   ]
+//   return (
+//     <div className="rounded-[14px] p-6" style={{ backgroundColor: "#0D1526", border: "1px solid rgba(0,0,0,0.08)", boxShadow: "0 24px 60px rgba(0,0,0,0.12)" }}>
+//       <div className="mb-4 flex items-center gap-1.5">
+//         <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#EF4444" }} />
+//         <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#F59E0B" }} />
+//         <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#10B981" }} />
+//       </div>
+//       <div className="mb-3 flex items-center justify-between">
+//         <span className="text-sm font-bold text-white">Threat Feed</span>
+//         <div className="flex items-center gap-1.5">
+//           <div className="h-1.5 w-1.5 rounded-full animate-pulse-dot" style={{ backgroundColor: "#10B981" }} />
+//           <span className="text-[11px]" style={{ color: "#0D9488" }}>Live</span>
+//         </div>
+//       </div>
+//       <div className="space-y-2">
+//         {events.map((e, i) => (
+//           <div key={i} className="flex items-center gap-3 rounded-lg p-3" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+//             <Bell className="h-3.5 w-3.5" style={{ color: "#2563EB" }} />
+//             <div className="flex-1">
+//               <span className="text-[13px] text-white">{e.label}</span>
+//             </div>
+//             <div className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: e.color }} />
+//             <span className="text-[11px]" style={{ color: "rgba(255,255,255,0.3)" }}>{e.time}</span>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   )
+// }
+// function MockupChat() {
+//   return (
+//     <div className="rounded-[14px] p-6" style={{ backgroundColor: "#0D1526", border: "1px solid rgba(0,0,0,0.08)", boxShadow: "0 24px 60px rgba(0,0,0,0.12)" }}>
+//       <div className="mb-4 flex items-center gap-1.5">
+//         <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#EF4444" }} />
+//         <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#F59E0B" }} />
+//         <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#10B981" }} />
+//       </div>
+//       <div className="mb-3 flex items-center gap-2">
+//         <Bot className="h-4 w-4" style={{ color: "#2563EB" }} />
+//         <span className="text-sm font-bold text-white">AI Security Assistant</span>
+//       </div>
+//       <div className="space-y-3">
+//         <div className="rounded-lg p-3" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+//           <p className="text-[13px] text-white/60">
+//             {"Summarize the security events from the last 24 hours"}
+//           </p>
+//         </div>
+//         <div className="rounded-lg p-3" style={{ background: "rgba(37,99,235,0.08)", border: "1px solid rgba(37,99,235,0.15)" }}>
+//           <div className="flex items-start gap-2">
+//             <MessageSquare className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{ color: "#2563EB" }} />
+//             <p className="text-[13px] text-white/70">
+//               {"In the last 24h, there were 3 critical alerts: 2 brute force attempts and 1 suspicious login. All were automatically blocked..."}
+//             </p>
+//           </div>
+//         </div>
+//         <div className="flex items-center gap-2 rounded-lg p-2.5" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+//           <input
+//             readOnly
+//             placeholder="Ask about your security..."
+//             className="flex-1 bg-transparent text-[13px] text-white/40 placeholder:text-white/25 focus:outline-none"
+//           />
+//           <Send className="h-3.5 w-3.5" style={{ color: "#2563EB" }} />
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+// const mockupComponents: Record<string, React.FC> = {
+//   welcome: MockupWelcome,
+//   feed: MockupFeed,
+//   chat: MockupChat,
+// }
+// const sectionVariants = {
+//   hidden: { opacity: 0, y: 40 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] } },
+// }
+// export default function HowItWorks() {
+//   return (
+//     <section id="how-it-works" style={{ backgroundColor: "#F2F5FA" }} className="py-24 lg:py-[100px]">
+//       <div className="mx-auto max-w-[1200px] px-6">
+//         {/* Section divider label */}
+//         <motion.div
+//           className="flex items-center gap-4"
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6 }}
+//         >
+//           <div className="h-px flex-1" style={{ background: "rgba(0,0,0,0.12)" }} />
+//           <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.08em]" style={{ color: "#6B7280" }}>
+//             Our workflow
+//           </span>
+//           <div className="h-px flex-1" style={{ background: "rgba(0,0,0,0.12)" }} />
+//         </motion.div>
+//         {/* Headline */}
+//         <motion.h2
+//           className="mx-auto mt-8 mb-16 max-w-[640px] text-center text-balance"
+//           style={{
+//             fontSize: "clamp(2.2rem, 4vw, 3.2rem)",
+//             fontWeight: 800,
+//             letterSpacing: "-0.03em",
+//             lineHeight: 1.05,
+//             color: "#0A0F1F",
+//           }}
+//           initial={{ opacity: 0, y: 40 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true, margin: "-80px" }}
+//           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+//         >
+//           How our platform makes security easier
+//         </motion.h2>
+//         {/* Steps */}
+//         <div className="space-y-20 lg:space-y-24">
+//           {steps.map((step, i) => {
+//             const Mockup = mockupComponents[step.mockup]
+//             const isEven = i % 2 === 1
+//             return (
+//               <motion.div
+//                 key={i}
+//                 className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${isEven ? "" : ""}`}
+//                 variants={sectionVariants}
+//                 initial="hidden"
+//                 whileInView="visible"
+//                 viewport={{ once: true, margin: "-80px" }}
+//               >
+//                 <div className={isEven ? "lg:order-2" : ""}>
+//                   <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.1em]" style={{ color: "#2563EB" }}>
+//                     {step.number} — {step.tag}
+//                   </p>
+//                   <h3 className="mb-3.5" style={{ fontSize: "1.5rem", fontWeight: 800, color: "#0A0F1F", letterSpacing: "-0.025em" }}>
+//                     {step.title}
+//                   </h3>
+//                   <p style={{ fontSize: "1rem", color: "#6B7280", lineHeight: 1.75 }} className="max-w-[400px]">
+//                     {step.body}
+//                   </p>
+//                 </div>
+//                 <div className={isEven ? "lg:order-1" : ""}>
+//                   <Mockup />
+//                 </div>
+//               </motion.div>
+//             )
+//           })}
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
 "use client";
 ;
 ;
@@ -1485,22 +2137,22 @@ const steps = [
     {
         number: "01",
         tag: "CONNECT",
-        title: "Sign Up and Connect",
-        body: "Create your account in minutes and connect your log sources via API or our lightweight agent. No complex infrastructure needed. Get running in under 10 minutes.",
+        title: "Sign up and connect your first log source",
+        body: "Create your account and send logs via our HTTPS API or lightweight agent. Connect firewalls, Windows servers, and cloud apps in under 30 minutes — no hardware, no VPN tunnels.",
         mockup: "welcome"
     },
     {
         number: "02",
         tag: "MONITOR",
-        title: "Monitor in Real Time",
-        body: "Watch threats, anomalies, and system health surface instantly on your live dashboard. Alerts reach you the moment something needs attention.",
+        title: "See threats appear in real time",
+        body: "Watch failed logins, firewall blocks, and suspicious activity appear on your live dashboard. Alerts reach your inbox the moment something serious needs attention.",
         mockup: "feed"
     },
     {
         number: "03",
         tag: "INVESTIGATE",
-        title: "Investigate with AI",
-        body: "Ask questions in plain language. The AI assistant summarizes incidents, suggests responses, and generates detailed reports automatically.",
+        title: "Let AI explain what's going on",
+        body: 'Ask questions in plain language: "Show me brute-force attacks from last night." AfricAnalyzer summarises incidents, shows the chain of events, and suggests next steps you can take.',
         mockup: "chat"
     }
 ];
@@ -1523,7 +2175,7 @@ function MockupWelcome() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 35,
+                        lineNumber: 256,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1533,7 +2185,7 @@ function MockupWelcome() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 36,
+                        lineNumber: 257,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1543,13 +2195,13 @@ function MockupWelcome() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 37,
+                        lineNumber: 258,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/how-it-works.tsx",
-                lineNumber: 34,
+                lineNumber: 255,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1568,12 +2220,12 @@ function MockupWelcome() {
                             className: "h-5 w-5 text-white"
                         }, void 0, false, {
                             fileName: "[project]/components/how-it-works.tsx",
-                            lineNumber: 41,
+                            lineNumber: 262,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 40,
+                        lineNumber: 261,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1583,7 +2235,7 @@ function MockupWelcome() {
                                 children: "Welcome to Afric-Analyzer"
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 44,
+                                lineNumber: 265,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1591,22 +2243,22 @@ function MockupWelcome() {
                                 style: {
                                     color: "rgba(255,255,255,0.45)"
                                 },
-                                children: "Connect your first log source to get started"
+                                children: "Connect your first log source — ready in 30 minutes"
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 45,
+                                lineNumber: 266,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 43,
+                        lineNumber: 264,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/how-it-works.tsx",
-                lineNumber: 39,
+                lineNumber: 260,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1634,7 +2286,7 @@ function MockupWelcome() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 51,
+                                lineNumber: 272,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1642,7 +2294,7 @@ function MockupWelcome() {
                                 children: item.label
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 52,
+                                lineNumber: 273,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1653,24 +2305,24 @@ function MockupWelcome() {
                                 children: "Configure →"
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 53,
+                                lineNumber: 274,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, i, true, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 50,
+                        lineNumber: 271,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/how-it-works.tsx",
-                lineNumber: 48,
+                lineNumber: 269,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/how-it-works.tsx",
-        lineNumber: 32,
+        lineNumber: 253,
         columnNumber: 5
     }, this);
 }
@@ -1710,7 +2362,7 @@ function MockupFeed() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 70,
+                        lineNumber: 291,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1720,7 +2372,7 @@ function MockupFeed() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 71,
+                        lineNumber: 292,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1730,13 +2382,13 @@ function MockupFeed() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 72,
+                        lineNumber: 293,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/how-it-works.tsx",
-                lineNumber: 69,
+                lineNumber: 290,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1747,7 +2399,7 @@ function MockupFeed() {
                         children: "Threat Feed"
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 75,
+                        lineNumber: 296,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1760,7 +2412,7 @@ function MockupFeed() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 77,
+                                lineNumber: 298,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1771,19 +2423,19 @@ function MockupFeed() {
                                 children: "Live"
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 78,
+                                lineNumber: 299,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 76,
+                        lineNumber: 297,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/how-it-works.tsx",
-                lineNumber: 74,
+                lineNumber: 295,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1802,7 +2454,7 @@ function MockupFeed() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 84,
+                                lineNumber: 305,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1812,12 +2464,12 @@ function MockupFeed() {
                                     children: e.label
                                 }, void 0, false, {
                                     fileName: "[project]/components/how-it-works.tsx",
-                                    lineNumber: 86,
+                                    lineNumber: 307,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 85,
+                                lineNumber: 306,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1827,7 +2479,7 @@ function MockupFeed() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 88,
+                                lineNumber: 309,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1838,24 +2490,24 @@ function MockupFeed() {
                                 children: e.time
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 89,
+                                lineNumber: 310,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, i, true, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 83,
+                        lineNumber: 304,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/how-it-works.tsx",
-                lineNumber: 81,
+                lineNumber: 302,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/how-it-works.tsx",
-        lineNumber: 68,
+        lineNumber: 289,
         columnNumber: 5
     }, this);
 }
@@ -1878,7 +2530,7 @@ function MockupChat() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 101,
+                        lineNumber: 322,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1888,7 +2540,7 @@ function MockupChat() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 102,
+                        lineNumber: 323,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1898,13 +2550,13 @@ function MockupChat() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 103,
+                        lineNumber: 324,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/how-it-works.tsx",
-                lineNumber: 100,
+                lineNumber: 321,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1917,7 +2569,7 @@ function MockupChat() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 106,
+                        lineNumber: 327,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1925,13 +2577,13 @@ function MockupChat() {
                         children: "AI Security Assistant"
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 107,
+                        lineNumber: 328,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/how-it-works.tsx",
-                lineNumber: 105,
+                lineNumber: 326,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1948,12 +2600,12 @@ function MockupChat() {
                             children: "Summarize the security events from the last 24 hours"
                         }, void 0, false, {
                             fileName: "[project]/components/how-it-works.tsx",
-                            lineNumber: 111,
+                            lineNumber: 332,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 110,
+                        lineNumber: 331,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1972,7 +2624,7 @@ function MockupChat() {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/components/how-it-works.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 338,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1980,18 +2632,18 @@ function MockupChat() {
                                     children: "In the last 24h, there were 3 critical alerts: 2 brute force attempts and 1 suspicious login. All were automatically blocked..."
                                 }, void 0, false, {
                                     fileName: "[project]/components/how-it-works.tsx",
-                                    lineNumber: 118,
+                                    lineNumber: 339,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/how-it-works.tsx",
-                            lineNumber: 116,
+                            lineNumber: 337,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 115,
+                        lineNumber: 336,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2007,7 +2659,7 @@ function MockupChat() {
                                 className: "flex-1 bg-transparent text-[13px] text-white/40 placeholder:text-white/25 focus:outline-none"
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 124,
+                                lineNumber: 345,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__["Send"], {
@@ -2017,25 +2669,25 @@ function MockupChat() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/how-it-works.tsx",
-                                lineNumber: 129,
+                                lineNumber: 350,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/how-it-works.tsx",
-                        lineNumber: 123,
+                        lineNumber: 344,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/how-it-works.tsx",
-                lineNumber: 109,
+                lineNumber: 330,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/how-it-works.tsx",
-        lineNumber: 99,
+        lineNumber: 320,
         columnNumber: 5
     }, this);
 }
@@ -2095,7 +2747,7 @@ function HowItWorks() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/components/how-it-works.tsx",
-                            lineNumber: 159,
+                            lineNumber: 380,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2106,7 +2758,7 @@ function HowItWorks() {
                             children: "Our workflow"
                         }, void 0, false, {
                             fileName: "[project]/components/how-it-works.tsx",
-                            lineNumber: 160,
+                            lineNumber: 381,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2116,13 +2768,13 @@ function HowItWorks() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/components/how-it-works.tsx",
-                            lineNumber: 163,
+                            lineNumber: 384,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/how-it-works.tsx",
-                    lineNumber: 152,
+                    lineNumber: 373,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].h2, {
@@ -2158,7 +2810,7 @@ function HowItWorks() {
                     children: "How our platform makes security easier"
                 }, void 0, false, {
                     fileName: "[project]/components/how-it-works.tsx",
-                    lineNumber: 167,
+                    lineNumber: 388,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2191,7 +2843,7 @@ function HowItWorks() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/how-it-works.tsx",
-                                            lineNumber: 199,
+                                            lineNumber: 420,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2205,7 +2857,7 @@ function HowItWorks() {
                                             children: step.title
                                         }, void 0, false, {
                                             fileName: "[project]/components/how-it-works.tsx",
-                                            lineNumber: 202,
+                                            lineNumber: 423,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2218,48 +2870,48 @@ function HowItWorks() {
                                             children: step.body
                                         }, void 0, false, {
                                             fileName: "[project]/components/how-it-works.tsx",
-                                            lineNumber: 205,
+                                            lineNumber: 426,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/how-it-works.tsx",
-                                    lineNumber: 198,
+                                    lineNumber: 419,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: isEven ? "lg:order-1" : "",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Mockup, {}, void 0, false, {
                                         fileName: "[project]/components/how-it-works.tsx",
-                                        lineNumber: 210,
+                                        lineNumber: 431,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/how-it-works.tsx",
-                                    lineNumber: 209,
+                                    lineNumber: 430,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, i, true, {
                             fileName: "[project]/components/how-it-works.tsx",
-                            lineNumber: 190,
+                            lineNumber: 411,
                             columnNumber: 15
                         }, this);
                     })
                 }, void 0, false, {
                     fileName: "[project]/components/how-it-works.tsx",
-                    lineNumber: 185,
+                    lineNumber: 406,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/how-it-works.tsx",
-            lineNumber: 150,
+            lineNumber: 371,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/how-it-works.tsx",
-        lineNumber: 149,
+        lineNumber: 370,
         columnNumber: 5
     }, this);
 }
@@ -2281,6 +2933,240 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lu
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bot$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Bot$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/bot.js [app-ssr] (ecmascript) <export default as Bot>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Shield$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/shield.js [app-ssr] (ecmascript) <export default as Shield>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/circle-check-big.js [app-ssr] (ecmascript) <export default as CheckCircle>");
+// "use client"
+// import { useState } from "react"
+// import { motion, AnimatePresence } from "framer-motion"
+// import { ChevronDown, Activity, BarChart3, Bot, Shield, CheckCircle } from "lucide-react"
+// const features = [
+//   {
+//     number: "01",
+//     title: "Real-Time Log Ingestion",
+//     description: "Collect logs from any system, cloud, or environment with a high-performance lightweight pipeline.",
+//     icon: Activity,
+//     premium: false,
+//     detail: {
+//       fullDescription: "Our high-performance ingestion pipeline handles millions of events per second, normalizing and enriching data from any source in real time.",
+//       benefits: [
+//         "Ingest from 350+ log sources out of the box",
+//         "Sub-second processing latency",
+//         "Automatic schema detection and normalization",
+//         "Zero data loss with guaranteed delivery",
+//       ],
+//     },
+//   },
+//   {
+//     number: "02",
+//     title: "Intelligence Dashboard",
+//     description: "Visualize threats, anomalies, and system health at a glance with a clean, powerful dashboard.",
+//     icon: BarChart3,
+//     premium: false,
+//     detail: {
+//       fullDescription: "A unified command center for your entire security posture. See threats, trends, and system health across all connected infrastructure.",
+//       benefits: [
+//         "Real-time threat visualization and mapping",
+//         "Custom dashboards and widgets",
+//         "Automated anomaly detection alerts",
+//         "Historical trend analysis and reporting",
+//       ],
+//     },
+//   },
+//   {
+//     number: "03",
+//     title: "AI Security Assistant",
+//     description: "Ask in natural language. Get incident summaries, threat analysis, and automated reports instantly.",
+//     icon: Bot,
+//     premium: true,
+//     detail: {
+//       fullDescription: "Your AI-powered security analyst that understands context, correlates events, and generates actionable intelligence in plain language.",
+//       benefits: [
+//         "Natural language threat investigation",
+//         "Automated incident summarization",
+//         "Smart response recommendations",
+//         "One-click report generation",
+//       ],
+//     },
+//   },
+//   {
+//     number: "04",
+//     title: "Enterprise-Grade Security",
+//     description: "End-to-end encryption, role-based access, and cloud-native isolation for sensitive institutional data.",
+//     icon: Shield,
+//     premium: false,
+//     detail: {
+//       fullDescription: "Built from the ground up with security-first architecture. Your data is encrypted, isolated, and protected by enterprise-grade access controls.",
+//       benefits: [
+//         "AES-256 encryption at rest and in transit",
+//         "Role-based access control (RBAC)",
+//         "Multi-tenant data isolation",
+//         "SOC 2 compliance ready",
+//       ],
+//     },
+//   },
+// ]
+// const sectionVariants = {
+//   hidden: {},
+//   visible: { transition: { staggerChildren: 0.1 } },
+// }
+// const itemVariants = {
+//   hidden: { opacity: 0, y: 32 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+// }
+// export default function Features() {
+//   const [activeIndex, setActiveIndex] = useState(0)
+//   const active = features[activeIndex]
+//   const ActiveIcon = active.icon
+//   return (
+//     <section id="features" style={{ backgroundColor: "#070D1A" }} className="py-24 lg:py-[100px]">
+//       <div className="mx-auto max-w-[1200px] px-6">
+//         {/* Section divider label */}
+//         <motion.div
+//           className="flex items-center gap-4"
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6 }}
+//         >
+//           <div className="h-px flex-1" style={{ background: "rgba(255,255,255,0.08)" }} />
+//           <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.08em]" style={{ color: "rgba(255,255,255,0.3)" }}>
+//             What we provide
+//           </span>
+//           <div className="h-px flex-1" style={{ background: "rgba(255,255,255,0.08)" }} />
+//         </motion.div>
+//         {/* Headline */}
+//         <motion.div
+//           className="mt-8 mb-16 text-center"
+//           initial={{ opacity: 0, y: 40 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true, margin: "-80px" }}
+//           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+//         >
+//           <h2
+//             className="mx-auto max-w-[640px] text-balance text-white"
+//             style={{
+//               fontSize: "clamp(2.2rem, 4vw, 3.2rem)",
+//               fontWeight: 800,
+//               letterSpacing: "-0.03em",
+//               lineHeight: 1.05,
+//             }}
+//           >
+//             Everything you need to secure your infrastructure
+//           </h2>
+//           <p className="mt-4" style={{ color: "rgba(255,255,255,0.5)", fontSize: "1rem" }}>
+//             Comprehensive tools built for modern African security teams.
+//           </p>
+//         </motion.div>
+//         {/* 2-column layout */}
+//         <motion.div
+//           className="grid gap-10 lg:grid-cols-2 lg:gap-12"
+//           variants={sectionVariants}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true, margin: "-80px" }}
+//         >
+//           {/* Left: accordion list */}
+//           <div>
+//             {features.map((feat, i) => {
+//               const isOpen = i === activeIndex
+//               return (
+//                 <motion.div
+//                   key={i}
+//                   variants={itemVariants}
+//                   style={{
+//                     borderBottom: i < features.length - 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
+//                   }}
+//                 >
+//                   <button
+//                     onClick={() => setActiveIndex(i)}
+//                     className="flex w-full items-center justify-between py-5 text-left"
+//                   >
+//                     <div className="flex items-center gap-3">
+//                       <span className="text-[11px] font-medium" style={{ color: "rgba(255,255,255,0.35)" }}>
+//                         {feat.number}
+//                       </span>
+//                       <span className="text-[17px] font-bold text-white">
+//                         {feat.title}
+//                       </span>
+//                       {feat.premium && (
+//                         <span
+//                           className="rounded px-[7px] py-[2px] text-[10px] font-bold"
+//                           style={{
+//                             background: "rgba(37,99,235,0.2)",
+//                             border: "1px solid rgba(37,99,235,0.3)",
+//                             color: "#60A5FA",
+//                           }}
+//                         >
+//                           Premium
+//                         </span>
+//                       )}
+//                     </div>
+//                     <motion.div
+//                       animate={{ rotate: isOpen ? 180 : 0 }}
+//                       transition={{ duration: 0.25 }}
+//                     >
+//                       <ChevronDown className="h-[18px] w-[18px]" style={{ color: "#2563EB" }} />
+//                     </motion.div>
+//                   </button>
+//                   <AnimatePresence>
+//                     {isOpen && (
+//                       <motion.div
+//                         initial={{ height: 0, opacity: 0 }}
+//                         animate={{ height: "auto", opacity: 1 }}
+//                         exit={{ height: 0, opacity: 0 }}
+//                         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+//                         style={{ overflow: "hidden" }}
+//                       >
+//                         <p className="pb-5 text-sm leading-[1.7]" style={{ color: "rgba(255,255,255,0.5)" }}>
+//                           {feat.description}
+//                         </p>
+//                       </motion.div>
+//                     )}
+//                   </AnimatePresence>
+//                 </motion.div>
+//               )
+//             })}
+//           </div>
+//           {/* Right: feature detail panel */}
+//           <div
+//             className="rounded-2xl p-8"
+//             style={{
+//               backgroundColor: "#0D1526",
+//               border: "1px solid rgba(255,255,255,0.08)",
+//             }}
+//           >
+//             <AnimatePresence mode="wait">
+//               <motion.div
+//                 key={activeIndex}
+//                 initial={{ opacity: 0, y: 12 }}
+//                 animate={{ opacity: 1, y: 0 }}
+//                 exit={{ opacity: 0, y: -12 }}
+//                 transition={{ duration: 0.3 }}
+//               >
+//                 <div
+//                   className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl"
+//                   style={{ background: "rgba(37,99,235,0.12)" }}
+//                 >
+//                   <ActiveIcon className="h-6 w-6" style={{ color: "#2563EB" }} />
+//                 </div>
+//                 <h3 className="mb-3 text-[22px] font-bold text-white">{active.title}</h3>
+//                 <p className="mb-6 text-sm leading-[1.75]" style={{ color: "rgba(255,255,255,0.5)" }}>
+//                   {active.detail.fullDescription}
+//                 </p>
+//                 <div className="space-y-3">
+//                   {active.detail.benefits.map((b, i) => (
+//                     <div key={i} className="flex items-start gap-2.5">
+//                       <CheckCircle className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#2563EB" }} />
+//                       <span className="text-sm text-white/70">{b}</span>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </motion.div>
+//             </AnimatePresence>
+//           </div>
+//         </motion.div>
+//       </div>
+//     </section>
+//   )
+// }
 "use client";
 ;
 ;
@@ -2290,15 +3176,15 @@ const features = [
     {
         number: "01",
         title: "Real-Time Log Ingestion",
-        description: "Collect logs from any system, cloud, or environment with a high-performance lightweight pipeline.",
+        description: "Collect logs from firewalls, Windows, Linux, cloud apps and more via a secure HTTP API. AfricAnalyzer normalises every vendor format into one standard within milliseconds.",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$activity$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Activity$3e$__["Activity"],
         premium: false,
         detail: {
-            fullDescription: "Our high-performance ingestion pipeline handles millions of events per second, normalizing and enriching data from any source in real time.",
+            fullDescription: "Collect logs from firewalls, Windows, Linux, cloud apps and more via a secure HTTP API. AfricAnalyzer normalises every vendor format into one standard within milliseconds — no proprietary hardware required.",
             benefits: [
-                "Ingest from 350+ log sources out of the box",
-                "Sub-second processing latency",
-                "Automatic schema detection and normalization",
+                "Ingest from firewalls, Windows, Linux & cloud apps",
+                "Secure HTTPS API or lightweight agent",
+                "Automatic format normalisation across all vendors",
                 "Zero data loss with guaranteed delivery"
             ]
         }
@@ -2306,48 +3192,48 @@ const features = [
     {
         number: "02",
         title: "Intelligence Dashboard",
-        description: "Visualize threats, anomalies, and system health at a glance with a clean, powerful dashboard.",
+        description: "Get one clean view of login failures, firewall blocks, anomalous activity and risk trends across your whole organisation, with filters for tenants, locations, and devices.",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$column$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart3$3e$__["BarChart3"],
         premium: false,
         detail: {
-            fullDescription: "A unified command center for your entire security posture. See threats, trends, and system health across all connected infrastructure.",
+            fullDescription: "Get one clean view of login failures, firewall blocks, anomalous activity and risk trends across your whole organisation — with filters for tenants, locations, and devices.",
             benefits: [
-                "Real-time threat visualization and mapping",
-                "Custom dashboards and widgets",
+                "Real-time threat visualisation and mapping",
+                "Filter by tenant, location, or device",
                 "Automated anomaly detection alerts",
-                "Historical trend analysis and reporting"
+                "Historical trend analysis and audit-ready reporting"
             ]
         }
     },
     {
         number: "03",
         title: "AI Security Assistant",
-        description: "Ask in natural language. Get incident summaries, threat analysis, and automated reports instantly.",
+        description: "Use natural language to search logs, summarise incidents, and generate audit reports. Ideal for CIOs, deans, and SME owners who want the story, not raw data.",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bot$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Bot$3e$__["Bot"],
         premium: true,
         detail: {
-            fullDescription: "Your AI-powered security analyst that understands context, correlates events, and generates actionable intelligence in plain language.",
+            fullDescription: "Use natural language to search logs, summarise incidents, and generate audit reports. Ideal for CIOs, deans, and SME owners who want the story, not raw data.",
             benefits: [
-                "Natural language threat investigation",
-                "Automated incident summarization",
-                "Smart response recommendations",
-                "One-click report generation"
+                "Natural language log search & investigation",
+                "Automated incident summarisation",
+                "One-click audit report generation",
+                "Smart response recommendations"
             ]
         }
     },
     {
         number: "04",
         title: "Enterprise-Grade Security",
-        description: "End-to-end encryption, role-based access, and cloud-native isolation for sensitive institutional data.",
+        description: "Multi-tenant isolation, role-based access, encryption in transit and at rest, and regional data residency to meet African and EU regulations.",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Shield$3e$__["Shield"],
         premium: false,
         detail: {
-            fullDescription: "Built from the ground up with security-first architecture. Your data is encrypted, isolated, and protected by enterprise-grade access controls.",
+            fullDescription: "Built from the ground up with security-first architecture. Multi-tenant isolation, role-based access, encryption in transit and at rest, and regional data residency to meet African and EU regulations.",
             benefits: [
                 "AES-256 encryption at rest and in transit",
                 "Role-based access control (RBAC)",
                 "Multi-tenant data isolation",
-                "SOC 2 compliance ready"
+                "African & EU regional data residency compliance"
             ]
         }
     }
@@ -2414,7 +3300,7 @@ function Features() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/components/features.tsx",
-                            lineNumber: 100,
+                            lineNumber: 345,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2425,7 +3311,7 @@ function Features() {
                             children: "What we provide"
                         }, void 0, false, {
                             fileName: "[project]/components/features.tsx",
-                            lineNumber: 101,
+                            lineNumber: 346,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2435,13 +3321,13 @@ function Features() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/components/features.tsx",
-                            lineNumber: 104,
+                            lineNumber: 349,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/features.tsx",
-                    lineNumber: 93,
+                    lineNumber: 338,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -2479,7 +3365,7 @@ function Features() {
                             children: "Everything you need to secure your infrastructure"
                         }, void 0, false, {
                             fileName: "[project]/components/features.tsx",
-                            lineNumber: 115,
+                            lineNumber: 360,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2488,16 +3374,16 @@ function Features() {
                                 color: "rgba(255,255,255,0.5)",
                                 fontSize: "1rem"
                             },
-                            children: "Comprehensive tools built for modern African security teams."
+                            children: "Everything you need to secure your infrastructure — without a security team."
                         }, void 0, false, {
                             fileName: "[project]/components/features.tsx",
-                            lineNumber: 126,
+                            lineNumber: 371,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/features.tsx",
-                    lineNumber: 108,
+                    lineNumber: 353,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -2534,7 +3420,7 @@ function Features() {
                                                             children: feat.number
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/features.tsx",
-                                                            lineNumber: 156,
+                                                            lineNumber: 401,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2542,7 +3428,7 @@ function Features() {
                                                             children: feat.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/features.tsx",
-                                                            lineNumber: 159,
+                                                            lineNumber: 404,
                                                             columnNumber: 23
                                                         }, this),
                                                         feat.premium && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2552,16 +3438,16 @@ function Features() {
                                                                 border: "1px solid rgba(37,99,235,0.3)",
                                                                 color: "#60A5FA"
                                                             },
-                                                            children: "Premium"
+                                                            children: "In development – early testers welcome"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/features.tsx",
-                                                            lineNumber: 163,
+                                                            lineNumber: 408,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/features.tsx",
-                                                    lineNumber: 155,
+                                                    lineNumber: 400,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -2578,18 +3464,18 @@ function Features() {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/features.tsx",
-                                                        lineNumber: 179,
+                                                        lineNumber: 424,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/features.tsx",
-                                                    lineNumber: 175,
+                                                    lineNumber: 420,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/features.tsx",
-                                            lineNumber: 151,
+                                            lineNumber: 396,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -2626,29 +3512,29 @@ function Features() {
                                                     children: feat.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/features.tsx",
-                                                    lineNumber: 191,
+                                                    lineNumber: 436,
                                                     columnNumber: 25
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/features.tsx",
-                                                lineNumber: 184,
+                                                lineNumber: 429,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/features.tsx",
-                                            lineNumber: 182,
+                                            lineNumber: 427,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/components/features.tsx",
-                                    lineNumber: 144,
+                                    lineNumber: 389,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/components/features.tsx",
-                            lineNumber: 140,
+                            lineNumber: 385,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2688,12 +3574,12 @@ function Features() {
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/components/features.tsx",
-                                                lineNumber: 222,
+                                                lineNumber: 467,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/features.tsx",
-                                            lineNumber: 218,
+                                            lineNumber: 463,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2701,7 +3587,7 @@ function Features() {
                                             children: active.title
                                         }, void 0, false, {
                                             fileName: "[project]/components/features.tsx",
-                                            lineNumber: 224,
+                                            lineNumber: 469,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2712,7 +3598,7 @@ function Features() {
                                             children: active.detail.fullDescription
                                         }, void 0, false, {
                                             fileName: "[project]/components/features.tsx",
-                                            lineNumber: 225,
+                                            lineNumber: 470,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2727,7 +3613,7 @@ function Features() {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/features.tsx",
-                                                            lineNumber: 231,
+                                                            lineNumber: 476,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2735,51 +3621,51 @@ function Features() {
                                                             children: b
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/features.tsx",
-                                                            lineNumber: 232,
+                                                            lineNumber: 477,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, i, true, {
                                                     fileName: "[project]/components/features.tsx",
-                                                    lineNumber: 230,
+                                                    lineNumber: 475,
                                                     columnNumber: 21
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/components/features.tsx",
-                                            lineNumber: 228,
+                                            lineNumber: 473,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, activeIndex, true, {
                                     fileName: "[project]/components/features.tsx",
-                                    lineNumber: 211,
+                                    lineNumber: 456,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/features.tsx",
-                                lineNumber: 210,
+                                lineNumber: 455,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/features.tsx",
-                            lineNumber: 203,
+                            lineNumber: 448,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/features.tsx",
-                    lineNumber: 132,
+                    lineNumber: 377,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/features.tsx",
-            lineNumber: 91,
+            lineNumber: 336,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/features.tsx",
-        lineNumber: 90,
+        lineNumber: 335,
         columnNumber: 5
     }, this);
 }
@@ -2792,12 +3678,165 @@ __turbopack_context__.s([
     ()=>UseCases
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.1.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+// "use client"
+// import { motion } from "framer-motion"
+// import { GraduationCap, Building2, ShieldCheck, CheckCircle2 } from "lucide-react"
+// const cases = [
+//   {
+//     icon: GraduationCap,
+//     title: "Universities",
+//     body: "Monitor campus networks, protect student and faculty data, detect insider threats, and support cybersecurity research programs.",
+//     benefits: [
+//       "Protect student & faculty data",
+//       "Monitor research infrastructure",
+//       "Support cybersecurity education",
+//       "Detect insider threats",
+//     ],
+//   },
+//   {
+//     icon: Building2,
+//     title: "Enterprises",
+//     body: "Centralize log management, achieve compliance, gain business intelligence, and monitor performance across your entire infrastructure.",
+//     benefits: [
+//       "Centralized log management",
+//       "Compliance reporting",
+//       "Business intelligence",
+//       "Performance monitoring",
+//     ],
+//   },
+//   {
+//     icon: ShieldCheck,
+//     title: "Security Teams",
+//     body: "Accelerate incident response, automate forensic reporting, and collaborate on live investigations in one unified workspace.",
+//     benefits: [
+//       "Rapid incident response",
+//       "Threat intelligence",
+//       "Automated forensics",
+//       "Collaborative investigations",
+//     ],
+//   },
+// ]
+// const containerVariants = {
+//   hidden: {},
+//   visible: { transition: { staggerChildren: 0.1 } },
+// }
+// const itemVariants = {
+//   hidden: { opacity: 0, y: 32 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+// }
+// export default function UseCases() {
+//   return (
+//     <section id="use-cases" style={{ backgroundColor: "#F2F5FA" }} className="py-24 lg:py-[100px]">
+//       <div className="mx-auto max-w-[1200px] px-6">
+//         {/* Section divider */}
+//         <motion.div
+//           className="flex items-center gap-4"
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6 }}
+//         >
+//           <div className="h-px flex-1" style={{ background: "rgba(0,0,0,0.12)" }} />
+//           <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.08em]" style={{ color: "#6B7280" }}>
+//             Use cases
+//           </span>
+//           <div className="h-px flex-1" style={{ background: "rgba(0,0,0,0.12)" }} />
+//         </motion.div>
+//         {/* Headline */}
+//         <motion.div
+//           className="mt-8 mb-16 text-center"
+//           initial={{ opacity: 0, y: 40 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true, margin: "-80px" }}
+//           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+//         >
+//           <h2
+//             style={{
+//               fontSize: "clamp(2.2rem, 4vw, 3.2rem)",
+//               fontWeight: 800,
+//               letterSpacing: "-0.03em",
+//               lineHeight: 1.05,
+//               color: "#0A0F1F",
+//             }}
+//           >
+//             Built for your organization
+//           </h2>
+//           <p className="mt-4" style={{ color: "#6B7280", fontSize: "1rem" }}>
+//             Universities, enterprises, or security operations centers — Afric-Analyzer fits your scale.
+//           </p>
+//         </motion.div>
+//         {/* Cards */}
+//         <motion.div
+//           className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+//           variants={containerVariants}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true, margin: "-80px" }}
+//         >
+//           {cases.map((c, i) => {
+//             const Icon = c.icon
+//             return (
+//               <motion.div
+//                 key={i}
+//                 variants={itemVariants}
+//                 className="overflow-hidden rounded-[14px] bg-white"
+//                 style={{
+//                   border: "1px solid rgba(0,0,0,0.07)",
+//                   boxShadow: "0 2px 16px rgba(0,0,0,0.06)",
+//                 }}
+//                 whileHover={{ y: -4, boxShadow: "0 12px 40px rgba(0,0,0,0.1)" }}
+//                 transition={{ duration: 0.2 }}
+//               >
+//                 {/* Top strip */}
+//                 <div className="h-1" style={{ backgroundColor: "#2563EB" }} />
+//                 <div className="p-7">
+//                   {/* Icon */}
+//                   <div
+//                     className="flex h-11 w-11 items-center justify-center rounded-[10px]"
+//                     style={{ background: "rgba(37,99,235,0.08)" }}
+//                   >
+//                     <Icon className="h-[22px] w-[22px]" style={{ color: "#2563EB" }} />
+//                   </div>
+//                   <h3
+//                     className="mt-3.5 mb-2.5"
+//                     style={{
+//                       fontSize: "20px",
+//                       fontWeight: 800,
+//                       color: "#0A0F1F",
+//                       letterSpacing: "-0.02em",
+//                     }}
+//                   >
+//                     {c.title}
+//                   </h3>
+//                   <p className="mb-5 text-sm leading-[1.7]" style={{ color: "#6B7280" }}>
+//                     {c.body}
+//                   </p>
+//                   {/* Benefits */}
+//                   <div className="space-y-2">
+//                     {c.benefits.map((b, j) => (
+//                       <div key={j} className="flex items-start gap-2.5">
+//                         <CheckCircle2 className="mt-0.5 h-[15px] w-[15px] shrink-0" style={{ color: "#2563EB" }} />
+//                         <span className="text-[13px]" style={{ color: "#374151" }}>
+//                           {b}
+//                         </span>
+//                       </div>
+//                     ))}
+//                   </div>
+//                 </div>
+//               </motion.div>
+//             )
+//           })}
+//         </motion.div>
+//       </div>
+//     </section>
+//   )
+// }
+// "use client"
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/framer-motion@11.18.2_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$graduation$2d$cap$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__GraduationCap$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/graduation-cap.js [app-ssr] (ecmascript) <export default as GraduationCap>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/building-2.js [app-ssr] (ecmascript) <export default as Building2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/shield-check.js [app-ssr] (ecmascript) <export default as ShieldCheck>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle2$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/circle-check.js [app-ssr] (ecmascript) <export default as CheckCircle2>");
-"use client";
 ;
 ;
 ;
@@ -2805,34 +3844,34 @@ const cases = [
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$graduation$2d$cap$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__GraduationCap$3e$__["GraduationCap"],
         title: "Universities",
-        body: "Monitor campus networks, protect student and faculty data, detect insider threats, and support cybersecurity research programs.",
+        body: "Monitor campus networks, protect student data, and pass audits without a dedicated SOC team.",
         benefits: [
-            "Protect student & faculty data",
+            "Protect student & faculty records",
             "Monitor research infrastructure",
-            "Support cybersecurity education",
-            "Detect insider threats"
+            "Support cybersecurity education and labs",
+            "Detect insider and account-sharing issues"
         ]
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__["Building2"],
-        title: "Enterprises",
-        body: "Centralize log management, achieve compliance, gain business intelligence, and monitor performance across your entire infrastructure.",
+        title: "SMEs & Enterprises",
+        body: "Centralise security logs, meet compliance, and understand what's happening across offices and cloud apps.",
         benefits: [
-            "Centralized log management",
-            "Compliance reporting",
-            "Business intelligence",
-            "Performance monitoring"
+            "Centralised log management",
+            "Compliance & audit reporting",
+            "Early breach detection",
+            "Executive-friendly reports"
         ]
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__["ShieldCheck"],
-        title: "Security Teams",
-        body: "Accelerate incident response, automate forensic reporting, and collaborate on live investigations in one unified workspace.",
+        title: "Security Teams / MSPs",
+        body: "Offer managed detection and response to many clients from one dashboard.",
         benefits: [
             "Rapid incident response",
-            "Threat intelligence",
-            "Automated forensics",
-            "Collaborative investigations"
+            "Multi-tenant views for MSPs",
+            "Automated incident reports",
+            "API integrations into your tools"
         ]
     }
 ];
@@ -2895,7 +3934,7 @@ function UseCases() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/components/use-cases.tsx",
-                            lineNumber: 64,
+                            lineNumber: 230,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2906,7 +3945,7 @@ function UseCases() {
                             children: "Use cases"
                         }, void 0, false, {
                             fileName: "[project]/components/use-cases.tsx",
-                            lineNumber: 65,
+                            lineNumber: 231,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2916,13 +3955,13 @@ function UseCases() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/components/use-cases.tsx",
-                            lineNumber: 68,
+                            lineNumber: 234,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/use-cases.tsx",
-                    lineNumber: 57,
+                    lineNumber: 223,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -2960,7 +3999,7 @@ function UseCases() {
                             children: "Built for your organization"
                         }, void 0, false, {
                             fileName: "[project]/components/use-cases.tsx",
-                            lineNumber: 79,
+                            lineNumber: 245,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2969,16 +4008,16 @@ function UseCases() {
                                 color: "#6B7280",
                                 fontSize: "1rem"
                             },
-                            children: "Universities, enterprises, or security operations centers — Afric-Analyzer fits your scale."
+                            children: "Universities, SMEs, or managed service providers — AfricAnalyzer fits your scale."
                         }, void 0, false, {
                             fileName: "[project]/components/use-cases.tsx",
-                            lineNumber: 90,
+                            lineNumber: 256,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/use-cases.tsx",
-                    lineNumber: 72,
+                    lineNumber: 238,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -3014,7 +4053,7 @@ function UseCases() {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/components/use-cases.tsx",
-                                    lineNumber: 118,
+                                    lineNumber: 284,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3032,12 +4071,12 @@ function UseCases() {
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/components/use-cases.tsx",
-                                                lineNumber: 126,
+                                                lineNumber: 292,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/use-cases.tsx",
-                                            lineNumber: 122,
+                                            lineNumber: 288,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -3051,7 +4090,7 @@ function UseCases() {
                                             children: c.title
                                         }, void 0, false, {
                                             fileName: "[project]/components/use-cases.tsx",
-                                            lineNumber: 129,
+                                            lineNumber: 295,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3062,7 +4101,7 @@ function UseCases() {
                                             children: c.body
                                         }, void 0, false, {
                                             fileName: "[project]/components/use-cases.tsx",
-                                            lineNumber: 140,
+                                            lineNumber: 306,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3077,7 +4116,7 @@ function UseCases() {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/use-cases.tsx",
-                                                            lineNumber: 148,
+                                                            lineNumber: 314,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3088,47 +4127,47 @@ function UseCases() {
                                                             children: b
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/use-cases.tsx",
-                                                            lineNumber: 149,
+                                                            lineNumber: 315,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, j, true, {
                                                     fileName: "[project]/components/use-cases.tsx",
-                                                    lineNumber: 147,
+                                                    lineNumber: 313,
                                                     columnNumber: 23
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/components/use-cases.tsx",
-                                            lineNumber: 145,
+                                            lineNumber: 311,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/use-cases.tsx",
-                                    lineNumber: 120,
+                                    lineNumber: 286,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, i, true, {
                             fileName: "[project]/components/use-cases.tsx",
-                            lineNumber: 106,
+                            lineNumber: 272,
                             columnNumber: 15
                         }, this);
                     })
                 }, void 0, false, {
                     fileName: "[project]/components/use-cases.tsx",
-                    lineNumber: 96,
+                    lineNumber: 262,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/use-cases.tsx",
-            lineNumber: 55,
+            lineNumber: 221,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/use-cases.tsx",
-        lineNumber: 54,
+        lineNumber: 220,
         columnNumber: 5
     }, this);
 }
@@ -3695,6 +4734,277 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lu
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$lock$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Lock$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/lock.js [app-ssr] (ecmascript) <export default as Lock>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/clock.js [app-ssr] (ecmascript) <export default as Clock>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/arrow-right.js [app-ssr] (ecmascript) <export default as ArrowRight>");
+// "use client"
+// import { useState } from "react"
+// import { motion } from "framer-motion"
+// import { Check, Lock, Clock, ArrowRight } from "lucide-react"
+// const plans = [
+//   {
+//     name: "Free",
+//     description: "Perfect for getting started with basic security monitoring.",
+//     monthlyPrice: 0,
+//     yearlyPrice: 0,
+//     cta: "Get Started",
+//     style: "outline" as const,
+//     features: [
+//       { text: "Basic dashboard", included: true },
+//       { text: "Up to 1GB logs/month", included: true },
+//       { text: "Real-time monitoring", included: true },
+//       { text: "7-day log retention", included: true },
+//       { text: "Email support", included: true },
+//       { text: "No AI Assistant", included: false },
+//       { text: "No team access", included: false },
+//     ],
+//   },
+//   {
+//     name: "Standard",
+//     description: "For growing teams that need more power and collaboration.",
+//     monthlyPrice: 99,
+//     yearlyPrice: 990,
+//     cta: "Start Free Trial",
+//     style: "primary" as const,
+//     popular: true,
+//     features: [
+//       { text: "Full dashboard", included: true },
+//       { text: "Unlimited log ingestion", included: true },
+//       { text: "Real-time alerts", included: true },
+//       { text: "90-day log retention", included: true },
+//       { text: "Team access up to 10 users", included: true },
+//       { text: "Role-based permissions", included: true },
+//       { text: "Priority support", included: true },
+//       { text: "API access", included: true },
+//     ],
+//   },
+//   {
+//     name: "Premium",
+//     description: "Enterprise-grade security with AI-powered intelligence.",
+//     monthlyPrice: 299,
+//     yearlyPrice: 2990,
+//     cta: "Contact Sales",
+//     style: "dark" as const,
+//     features: [
+//       { text: "Everything in Standard", included: true },
+//       { text: "AI Security Assistant", included: true },
+//       { text: "Automated incident reports", included: true },
+//       { text: "Advanced analytics", included: true },
+//       { text: "Unlimited log retention", included: true },
+//       { text: "Unlimited team members", included: true },
+//       { text: "24/7 priority support", included: true },
+//       { text: "Custom integrations", included: true },
+//       { text: "Dedicated account manager", included: true },
+//     ],
+//   },
+// ]
+// const containerVariants = {
+//   hidden: {},
+//   visible: { transition: { staggerChildren: 0.1 } },
+// }
+// const itemVariants = {
+//   hidden: { opacity: 0, y: 32 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+// }
+// export default function Pricing() {
+//   const [yearly, setYearly] = useState(false)
+//   return (
+//     <section id="pricing" style={{ backgroundColor: "#F2F5FA" }} className="py-24 lg:py-[100px]">
+//       <div className="mx-auto max-w-[1200px] px-6">
+//         {/* Coming Soon badge */}
+//         <motion.div
+//           className="mb-6 flex justify-center"
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6 }}
+//         >
+//           <div
+//             className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5"
+//             style={{
+//               background: "rgba(245,158,11,0.1)",
+//               border: "1px solid rgba(245,158,11,0.25)",
+//             }}
+//           >
+//             <Clock className="h-[13px] w-[13px]" style={{ color: "#F59E0B" }} />
+//             <span className="text-xs font-semibold" style={{ color: "#D97706" }}>
+//               Launching April 2026
+//             </span>
+//           </div>
+//         </motion.div>
+//         {/* Headline */}
+//         <motion.div
+//           className="mb-12 text-center"
+//           initial={{ opacity: 0, y: 40 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true, margin: "-80px" }}
+//           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+//         >
+//           <h2 style={{ fontSize: "clamp(2.2rem, 4vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.05, color: "#0A0F1F" }}>
+//             Simple, transparent pricing
+//           </h2>
+//           <p className="mt-4" style={{ color: "#6B7280", fontSize: "1rem" }}>
+//             Choose the plan that fits your security needs.
+//           </p>
+//           {/* Toggle */}
+//           <div className="mt-8 flex justify-center">
+//             <div
+//               className="inline-flex rounded-lg p-1"
+//               style={{ background: "rgba(0,0,0,0.05)", border: "1px solid rgba(0,0,0,0.08)" }}
+//             >
+//               <button
+//                 onClick={() => setYearly(false)}
+//                 className="rounded-md px-[18px] py-[7px] text-sm font-medium transition-all"
+//                 style={{
+//                   backgroundColor: !yearly ? "white" : "transparent",
+//                   color: !yearly ? "#0A0F1F" : "#6B7280",
+//                   fontWeight: !yearly ? 700 : 500,
+//                   boxShadow: !yearly ? "0 1px 6px rgba(0,0,0,0.1)" : "none",
+//                 }}
+//               >
+//                 Monthly
+//               </button>
+//               <button
+//                 onClick={() => setYearly(true)}
+//                 className="flex items-center gap-2 rounded-md px-[18px] py-[7px] text-sm font-medium transition-all"
+//                 style={{
+//                   backgroundColor: yearly ? "white" : "transparent",
+//                   color: yearly ? "#0A0F1F" : "#6B7280",
+//                   fontWeight: yearly ? 700 : 500,
+//                   boxShadow: yearly ? "0 1px 6px rgba(0,0,0,0.1)" : "none",
+//                 }}
+//               >
+//                 Yearly
+//                 <span className="rounded px-1.5 py-[1px] text-[10px] font-bold" style={{ background: "rgba(13,148,136,0.1)", color: "#0D9488" }}>
+//                   Save 17%
+//                 </span>
+//               </button>
+//             </div>
+//           </div>
+//         </motion.div>
+//         {/* Cards */}
+//         <motion.div
+//           className="grid gap-6 lg:grid-cols-3"
+//           variants={containerVariants}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true, margin: "-80px" }}
+//         >
+//           {plans.map((plan, i) => (
+//             <motion.div
+//               key={i}
+//               variants={itemVariants}
+//               className="relative rounded-2xl bg-white p-8"
+//               style={{
+//                 border: plan.popular ? "1.5px solid #2563EB" : "1px solid rgba(0,0,0,0.07)",
+//                 boxShadow: plan.popular ? "0 0 32px rgba(37,99,235,0.1)" : "none",
+//               }}
+//               whileHover={{ y: -4 }}
+//               transition={{ duration: 0.2 }}
+//             >
+//               {plan.popular && (
+//                 <div
+//                   className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-4 py-1.5 text-[11px] font-bold tracking-[0.04em] text-white"
+//                   style={{ backgroundColor: "#2563EB" }}
+//                 >
+//                   Most Popular
+//                 </div>
+//               )}
+//               <p className="mb-1.5 text-sm font-bold uppercase tracking-[0.04em]" style={{ color: "#6B7280" }}>
+//                 {plan.name}
+//               </p>
+//               <p className="mb-5 text-sm" style={{ color: "#6B7280" }}>
+//                 {plan.description}
+//               </p>
+//               {/* Price */}
+//               <div className="mb-6">
+//                 <span style={{ fontSize: "3rem", fontWeight: 900, letterSpacing: "-0.04em", color: "#0A0F1F" }}>
+//                   ${yearly && plan.yearlyPrice > 0 ? Math.round(plan.yearlyPrice / 12) : plan.monthlyPrice}
+//                 </span>
+//                 <span className="text-[15px]" style={{ color: "#6B7280" }}>/month</span>
+//                 {yearly && plan.yearlyPrice > 0 && (
+//                   <p className="mt-1 text-sm" style={{ color: "#0D9488" }}>
+//                     ${plan.yearlyPrice.toLocaleString()} billed annually
+//                   </p>
+//                 )}
+//               </div>
+//               {/* CTA button */}
+//               <button
+//                 className="mb-6 w-full rounded-[10px] py-3.5 text-[15px] font-bold transition-all"
+//                 style={{
+//                   backgroundColor:
+//                     plan.style === "primary" ? "#2563EB" :
+//                     plan.style === "dark" ? "#0A0F1F" : "white",
+//                   color:
+//                     plan.style === "outline" ? "#0A0F1F" : "white",
+//                   border:
+//                     plan.style === "outline" ? "1.5px solid rgba(0,0,0,0.15)" : "none",
+//                   boxShadow:
+//                     plan.style === "primary" ? "0 4px 16px rgba(37,99,235,0.3)" : "none",
+//                 }}
+//               >
+//                 {plan.cta}
+//               </button>
+//               {/* Features */}
+//               <div style={{ borderTop: "1px solid rgba(0,0,0,0.07)" }} className="pt-5">
+//                 <div className="space-y-2.5">
+//                   {plan.features.map((f, j) => (
+//                     <div key={j} className="flex items-start gap-2.5">
+//                       {f.included ? (
+//                         <div
+//                           className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-[5px]"
+//                           style={{ background: "rgba(37,99,235,0.1)" }}
+//                         >
+//                           <Check className="h-[15px] w-[15px]" style={{ color: "#2563EB" }} />
+//                         </div>
+//                       ) : (
+//                         <div
+//                           className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-[5px]"
+//                           style={{ background: "rgba(0,0,0,0.04)" }}
+//                         >
+//                           <Lock className="h-3 w-3" style={{ color: "#D1D5DB" }} />
+//                         </div>
+//                       )}
+//                       <span
+//                         className="text-[13px]"
+//                         style={{
+//                           color: f.included ? "#374151" : "#9CA3AF",
+//                           textDecoration: f.included ? "none" : "line-through",
+//                         }}
+//                       >
+//                         {f.text}
+//                       </span>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </motion.div>
+//         {/* Enterprise CTA */}
+//         <motion.div
+//           className="mt-10 flex flex-col items-center justify-between gap-6 rounded-[14px] p-9 lg:flex-row lg:px-10"
+//           style={{ backgroundColor: "#0A0F1F" }}
+//           initial={{ opacity: 0, y: 40 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true, margin: "-80px" }}
+//           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+//         >
+//           <div>
+//             <h3 className="text-lg font-bold text-white">Need a custom solution?</h3>
+//             <p className="mt-1 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
+//               Contact Sales for enterprise pricing with custom features.
+//             </p>
+//           </div>
+//           <button
+//             className="flex items-center gap-2 rounded-[10px] px-6 py-3 text-sm font-semibold text-white transition-colors"
+//             style={{ border: "1px solid rgba(255,255,255,0.2)" }}
+//           >
+//             Contact Sales
+//             <ArrowRight className="h-4 w-4" />
+//           </button>
+//         </motion.div>
+//       </div>
+//     </section>
+//   )
+// }
 "use client";
 ;
 ;
@@ -3741,7 +5051,7 @@ const plans = [
     },
     {
         name: "Standard",
-        description: "For growing teams that need more power and collaboration.",
+        description: "For SMEs and universities just starting with continuous monitoring.",
         monthlyPrice: 99,
         yearlyPrice: 990,
         cta: "Start Free Trial",
@@ -3784,7 +5094,7 @@ const plans = [
     },
     {
         name: "Premium",
-        description: "Enterprise-grade security with AI-powered intelligence.",
+        description: "For MSPs and institutions that need AI-assisted investigations and long-term retention.",
         monthlyPrice: 299,
         yearlyPrice: 2990,
         cta: "Contact Sales",
@@ -3895,7 +5205,7 @@ function Pricing() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/pricing.tsx",
-                                lineNumber: 96,
+                                lineNumber: 383,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3906,18 +5216,18 @@ function Pricing() {
                                 children: "Launching April 2026"
                             }, void 0, false, {
                                 fileName: "[project]/components/pricing.tsx",
-                                lineNumber: 97,
+                                lineNumber: 384,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/pricing.tsx",
-                        lineNumber: 89,
+                        lineNumber: 376,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/pricing.tsx",
-                    lineNumber: 82,
+                    lineNumber: 369,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -3955,7 +5265,7 @@ function Pricing() {
                             children: "Simple, transparent pricing"
                         }, void 0, false, {
                             fileName: "[project]/components/pricing.tsx",
-                            lineNumber: 111,
+                            lineNumber: 398,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3967,7 +5277,18 @@ function Pricing() {
                             children: "Choose the plan that fits your security needs."
                         }, void 0, false, {
                             fileName: "[project]/components/pricing.tsx",
-                            lineNumber: 114,
+                            lineNumber: 401,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "mt-2 text-sm font-medium",
+                            style: {
+                                color: "#2563EB"
+                            },
+                            children: "Pilot pricing available for universities and early adopters — ask us about 3-month validation pilots."
+                        }, void 0, false, {
+                            fileName: "[project]/components/pricing.tsx",
+                            lineNumber: 404,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3991,7 +5312,7 @@ function Pricing() {
                                         children: "Monthly"
                                     }, void 0, false, {
                                         fileName: "[project]/components/pricing.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 414,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4014,30 +5335,30 @@ function Pricing() {
                                                 children: "Save 17%"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pricing.tsx",
-                                                lineNumber: 147,
+                                                lineNumber: 437,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/pricing.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 426,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/pricing.tsx",
-                                lineNumber: 120,
+                                lineNumber: 410,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/pricing.tsx",
-                            lineNumber: 119,
+                            lineNumber: 409,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/pricing.tsx",
-                    lineNumber: 104,
+                    lineNumber: 391,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -4071,7 +5392,7 @@ function Pricing() {
                                     children: "Most Popular"
                                 }, void 0, false, {
                                     fileName: "[project]/components/pricing.tsx",
-                                    lineNumber: 176,
+                                    lineNumber: 466,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4082,7 +5403,7 @@ function Pricing() {
                                     children: plan.name
                                 }, void 0, false, {
                                     fileName: "[project]/components/pricing.tsx",
-                                    lineNumber: 184,
+                                    lineNumber: 474,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4093,7 +5414,7 @@ function Pricing() {
                                     children: plan.description
                                 }, void 0, false, {
                                     fileName: "[project]/components/pricing.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 477,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4112,7 +5433,7 @@ function Pricing() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/pricing.tsx",
-                                            lineNumber: 193,
+                                            lineNumber: 483,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4123,7 +5444,7 @@ function Pricing() {
                                             children: "/month"
                                         }, void 0, false, {
                                             fileName: "[project]/components/pricing.tsx",
-                                            lineNumber: 196,
+                                            lineNumber: 486,
                                             columnNumber: 17
                                         }, this),
                                         yearly && plan.yearlyPrice > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4138,13 +5459,13 @@ function Pricing() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/pricing.tsx",
-                                            lineNumber: 198,
+                                            lineNumber: 488,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/pricing.tsx",
-                                    lineNumber: 192,
+                                    lineNumber: 482,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4158,7 +5479,7 @@ function Pricing() {
                                     children: plan.cta
                                 }, void 0, false, {
                                     fileName: "[project]/components/pricing.tsx",
-                                    lineNumber: 205,
+                                    lineNumber: 495,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4183,12 +5504,12 @@ function Pricing() {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/pricing.tsx",
-                                                            lineNumber: 232,
+                                                            lineNumber: 522,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/pricing.tsx",
-                                                        lineNumber: 228,
+                                                        lineNumber: 518,
                                                         columnNumber: 25
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-[5px]",
@@ -4202,12 +5523,12 @@ function Pricing() {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/pricing.tsx",
-                                                            lineNumber: 239,
+                                                            lineNumber: 529,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/pricing.tsx",
-                                                        lineNumber: 235,
+                                                        lineNumber: 525,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4219,34 +5540,34 @@ function Pricing() {
                                                         children: f.text
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/pricing.tsx",
-                                                        lineNumber: 242,
+                                                        lineNumber: 532,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, j, true, {
                                                 fileName: "[project]/components/pricing.tsx",
-                                                lineNumber: 226,
+                                                lineNumber: 516,
                                                 columnNumber: 21
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/pricing.tsx",
-                                        lineNumber: 224,
+                                        lineNumber: 514,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/pricing.tsx",
-                                    lineNumber: 223,
+                                    lineNumber: 513,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, i, true, {
                             fileName: "[project]/components/pricing.tsx",
-                            lineNumber: 164,
+                            lineNumber: 454,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/pricing.tsx",
-                    lineNumber: 156,
+                    lineNumber: 446,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -4283,7 +5604,7 @@ function Pricing() {
                                     children: "Need a custom solution?"
                                 }, void 0, false, {
                                     fileName: "[project]/components/pricing.tsx",
-                                    lineNumber: 269,
+                                    lineNumber: 559,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4294,13 +5615,13 @@ function Pricing() {
                                     children: "Contact Sales for enterprise pricing with custom features."
                                 }, void 0, false, {
                                     fileName: "[project]/components/pricing.tsx",
-                                    lineNumber: 270,
+                                    lineNumber: 560,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/pricing.tsx",
-                            lineNumber: 268,
+                            lineNumber: 558,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4314,30 +5635,30 @@ function Pricing() {
                                     className: "h-4 w-4"
                                 }, void 0, false, {
                                     fileName: "[project]/components/pricing.tsx",
-                                    lineNumber: 279,
+                                    lineNumber: 569,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/pricing.tsx",
-                            lineNumber: 274,
+                            lineNumber: 564,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/pricing.tsx",
-                    lineNumber: 260,
+                    lineNumber: 550,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/pricing.tsx",
-            lineNumber: 80,
+            lineNumber: 367,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/pricing.tsx",
-        lineNumber: 79,
+        lineNumber: 366,
         columnNumber: 5
     }, this);
 }
@@ -4357,6 +5678,173 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lu
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.564.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/circle-check-big.js [app-ssr] (ecmascript) <export default as CheckCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$sonner$40$1$2e$7$2e$4_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/sonner@1.7.4_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/sonner/dist/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/supabase.ts [app-ssr] (ecmascript)");
+// "use client"
+// import { useState, useEffect, useRef } from "react"
+// import { motion } from "framer-motion"
+// import { Mail, Loader2, CheckCircle } from "lucide-react"
+// import { toast } from "sonner"
+// import { submitWaitlistEmail } from "@/lib/supabase"
+// function useCountdown(targetISO: string) {
+//   const targetRef = useRef(new Date(targetISO).getTime())
+//   const [time, setTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+//   useEffect(() => {
+//     const calc = () => {
+//       const now = Date.now()
+//       const diff = Math.max(0, targetRef.current - now)
+//       setTime({
+//         days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+//         hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+//         minutes: Math.floor((diff / (1000 * 60)) % 60),
+//         seconds: Math.floor((diff / 1000) % 60),
+//       })
+//     }
+//     calc()
+//     const id = setInterval(calc, 1000)
+//     return () => clearInterval(id)
+//   }, []) // no dependency on target — ref is stable
+//   return time
+// }
+// export default function EmailCapture() {
+//   const countdown = useCountdown("2026-04-01")
+//   const [email, setEmail] = useState("")
+//   const [loading, setLoading] = useState(false)
+//   const [success, setSuccess] = useState(false)
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault()
+//     if (!email) return
+//     setLoading(true)
+//     try {
+//       await submitWaitlistEmail(email)
+//       setSuccess(true)
+//       toast.success("Successfully joined the waitlist!")
+//       setEmail("")
+//       setTimeout(() => setSuccess(false), 3000)
+//     } catch {
+//       toast.error("Failed to submit. Please try again.")
+//     } finally {
+//       setLoading(false)
+//     }
+//   }
+//   const units = [
+//     { value: countdown.days, label: "Days" },
+//     { value: countdown.hours, label: "Hours" },
+//     { value: countdown.minutes, label: "Minutes" },
+//     { value: countdown.seconds, label: "Seconds" },
+//   ]
+//   return (
+//     <section style={{ background: "linear-gradient(180deg, #070D1A 0%, #03070F 100%)" }} className="py-24 lg:py-[100px]">
+//       <div className="mx-auto max-w-[1200px] px-6">
+//         {/* Countdown */}
+//         <motion.div
+//           className="text-center"
+//           initial={{ opacity: 0, y: 40 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true, margin: "-80px" }}
+//           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+//         >
+//           <p className="text-sm font-semibold" style={{ color: "rgba(255,255,255,0.45)" }}>
+//             Launching Public Beta
+//           </p>
+//           <p className="mt-1 text-sm" style={{ color: "rgba(255,255,255,0.3)" }}>
+//             April 1, 2026
+//           </p>
+//           <div className="mt-6 flex justify-center gap-3">
+//             {units.map((u, i) => (
+//               <div
+//                 key={i}
+//                 className="flex h-[76px] w-[76px] flex-col items-center justify-center rounded-xl"
+//                 style={{
+//                   background: "rgba(255,255,255,0.04)",
+//                   border: "1px solid rgba(255,255,255,0.08)",
+//                 }}
+//               >
+//                 <span className="text-white" style={{ fontSize: "1.9rem", fontWeight: 900, letterSpacing: "-0.04em" }}>
+//                   {String(u.value).padStart(2, "0")}
+//                 </span>
+//                 <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.07em]" style={{ color: "rgba(255,255,255,0.3)" }}>
+//                   {u.label}
+//                 </span>
+//               </div>
+//             ))}
+//           </div>
+//         </motion.div>
+//         {/* CTA card */}
+//         <motion.div
+//           className="mx-auto mt-14 max-w-[600px] rounded-[20px] p-10 text-center lg:p-[52px_48px]"
+//           style={{
+//             backgroundColor: "#0D1526",
+//             border: "1px solid rgba(37,99,235,0.2)",
+//             boxShadow: "0 0 80px rgba(37,99,235,0.06)",
+//           }}
+//           initial={{ opacity: 0, y: 40 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true, margin: "-80px" }}
+//           transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+//         >
+//           <h2 className="mb-3 text-balance" style={{ fontSize: "1.9rem", fontWeight: 800, color: "white", letterSpacing: "-0.03em" }}>
+//             Be among the first to experience{" "}
+//             <span style={{ color: "#2563EB" }}>Afric-Analyzer</span>
+//           </h2>
+//           <p className="mb-8 text-[15px]" style={{ color: "rgba(255,255,255,0.5)" }}>
+//             Request early access and we{"'"}ll contact you within 24 hours to activate your dashboard.
+//           </p>
+//           <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
+//             <div className="relative flex-1">
+//               <Mail
+//                 className="pointer-events-none absolute left-3.5 top-1/2 h-[18px] w-[18px] -translate-y-1/2"
+//                 style={{ color: "rgba(255,255,255,0.3)" }}
+//               />
+//               <input
+//                 type="email"
+//                 value={email}
+//                 onChange={(e) => setEmail(e.target.value)}
+//                 placeholder="Enter your email address"
+//                 className="w-full rounded-[10px] py-3.5 pl-11 pr-3.5 text-sm text-white placeholder:text-white/30 focus:outline-none"
+//                 style={{
+//                   background: "rgba(255,255,255,0.06)",
+//                   border: "1px solid rgba(255,255,255,0.12)",
+//                 }}
+//                 onFocus={(e) => (e.target.style.borderColor = "#2563EB")}
+//                 onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.12)")}
+//               />
+//             </div>
+//             <motion.button
+//               type="submit"
+//               disabled={loading || success}
+//               className="flex items-center justify-center gap-2 rounded-[10px] px-6 py-3.5 text-[15px] font-bold text-white disabled:opacity-50"
+//               style={{
+//                 backgroundColor: "#2563EB",
+//                 boxShadow: "0 0 24px rgba(37,99,235,0.35)",
+//               }}
+//               whileHover={{
+//                 boxShadow: "0 0 40px rgba(37,99,235,0.55), 0 0 80px rgba(37,99,235,0.2)",
+//                 scale: 1.03,
+//               }}
+//               whileTap={{ scale: 0.97 }}
+//             >
+//               {loading ? (
+//                 <>
+//                   <Loader2 className="h-4 w-4 animate-spin" />
+//                   Submitting...
+//                 </>
+//               ) : success ? (
+//                 <>
+//                   <CheckCircle className="h-4 w-4" style={{ color: "#0D9488" }} />
+//                   Submitted!
+//                 </>
+//               ) : (
+//                 "Request Access"
+//               )}
+//             </motion.button>
+//           </form>
+//           <p className="mt-3.5 text-xs" style={{ color: "rgba(255,255,255,0.25)" }}>
+//             We respect your privacy. No spam — ever.
+//           </p>
+//         </motion.div>
+//       </div>
+//     </section>
+//   )
+// }
 "use client";
 ;
 ;
@@ -4468,7 +5956,7 @@ function EmailCapture() {
                             children: "Launching Public Beta"
                         }, void 0, false, {
                             fileName: "[project]/components/email-capture.tsx",
-                            lineNumber: 73,
+                            lineNumber: 254,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4479,7 +5967,7 @@ function EmailCapture() {
                             children: "April 1, 2026"
                         }, void 0, false, {
                             fileName: "[project]/components/email-capture.tsx",
-                            lineNumber: 76,
+                            lineNumber: 257,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4501,7 +5989,7 @@ function EmailCapture() {
                                             children: String(u.value).padStart(2, "0")
                                         }, void 0, false, {
                                             fileName: "[project]/components/email-capture.tsx",
-                                            lineNumber: 90,
+                                            lineNumber: 271,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4512,24 +6000,24 @@ function EmailCapture() {
                                             children: u.label
                                         }, void 0, false, {
                                             fileName: "[project]/components/email-capture.tsx",
-                                            lineNumber: 93,
+                                            lineNumber: 274,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/components/email-capture.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 263,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/email-capture.tsx",
-                            lineNumber: 80,
+                            lineNumber: 261,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/email-capture.tsx",
-                    lineNumber: 66,
+                    lineNumber: 247,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -4571,22 +6059,22 @@ function EmailCapture() {
                                 letterSpacing: "-0.03em"
                             },
                             children: [
-                                "Be among the first to experience",
+                                "Be among the first to secure your logs with",
                                 " ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     style: {
                                         color: "#2563EB"
                                     },
-                                    children: "Afric-Analyzer"
+                                    children: "AfricAnalyzer"
                                 }, void 0, false, {
                                     fileName: "[project]/components/email-capture.tsx",
-                                    lineNumber: 116,
+                                    lineNumber: 297,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/email-capture.tsx",
-                            lineNumber: 114,
+                            lineNumber: 295,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4597,11 +6085,11 @@ function EmailCapture() {
                             children: [
                                 "Request early access and we",
                                 "'",
-                                "ll contact you within 24 hours to activate your dashboard."
+                                "ll contact you within 24 hours to set up a pilot for your SME or university."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/email-capture.tsx",
-                            lineNumber: 118,
+                            lineNumber: 299,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -4618,7 +6106,7 @@ function EmailCapture() {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/components/email-capture.tsx",
-                                            lineNumber: 124,
+                                            lineNumber: 305,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -4635,13 +6123,13 @@ function EmailCapture() {
                                             onBlur: (e)=>e.target.style.borderColor = "rgba(255,255,255,0.12)"
                                         }, void 0, false, {
                                             fileName: "[project]/components/email-capture.tsx",
-                                            lineNumber: 128,
+                                            lineNumber: 309,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/email-capture.tsx",
-                                    lineNumber: 123,
+                                    lineNumber: 304,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -4665,7 +6153,7 @@ function EmailCapture() {
                                                 className: "h-4 w-4 animate-spin"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/email-capture.tsx",
-                                                lineNumber: 158,
+                                                lineNumber: 339,
                                                 columnNumber: 19
                                             }, this),
                                             "Submitting..."
@@ -4679,7 +6167,7 @@ function EmailCapture() {
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/components/email-capture.tsx",
-                                                lineNumber: 163,
+                                                lineNumber: 344,
                                                 columnNumber: 19
                                             }, this),
                                             "Submitted!"
@@ -4687,13 +6175,13 @@ function EmailCapture() {
                                     }, void 0, true) : "Request Access"
                                 }, void 0, false, {
                                     fileName: "[project]/components/email-capture.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 323,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/email-capture.tsx",
-                            lineNumber: 122,
+                            lineNumber: 303,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4701,27 +6189,31 @@ function EmailCapture() {
                             style: {
                                 color: "rgba(255,255,255,0.25)"
                             },
-                            children: "We respect your privacy. No spam — ever."
-                        }, void 0, false, {
+                            children: [
+                                "We",
+                                "'",
+                                "re in the validation phase — limited pilot slots available for 2026."
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/components/email-capture.tsx",
-                            lineNumber: 172,
+                            lineNumber: 353,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/email-capture.tsx",
-                    lineNumber: 102,
+                    lineNumber: 283,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/email-capture.tsx",
-            lineNumber: 64,
+            lineNumber: 245,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/email-capture.tsx",
-        lineNumber: 63,
+        lineNumber: 244,
         columnNumber: 5
     }, this);
 }

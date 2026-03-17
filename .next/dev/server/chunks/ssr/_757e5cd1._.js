@@ -110,39 +110,29 @@ function Navigation({ onRequestAccess }) {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "hidden items-center gap-4 md:flex",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "text-sm text-white/50 transition-colors duration-150 hover:text-white",
-                                    children: "Sign In"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 67,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
-                                    onClick: onRequestAccess,
-                                    className: "rounded-full px-5 py-2 text-[13px] font-semibold text-white",
-                                    style: {
-                                        backgroundColor: "#2563EB"
-                                    },
-                                    whileHover: {
-                                        boxShadow: "0 0 32px rgba(37,99,235,0.45)",
-                                        scale: 1.03
-                                    },
-                                    whileTap: {
-                                        scale: 0.97
-                                    },
-                                    transition: {
-                                        duration: 0.15
-                                    },
-                                    children: "Request Access"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 70,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$11$2e$18$2e$2_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
+                                onClick: onRequestAccess,
+                                className: "rounded-full px-5 py-2 text-[13px] font-semibold text-white",
+                                style: {
+                                    backgroundColor: "#2563EB"
+                                },
+                                whileHover: {
+                                    boxShadow: "0 0 32px rgba(37,99,235,0.45)",
+                                    scale: 1.03
+                                },
+                                whileTap: {
+                                    scale: 0.97
+                                },
+                                transition: {
+                                    duration: 0.15
+                                },
+                                children: "Request Access"
+                            }, void 0, false, {
+                                fileName: "[project]/components/navigation.tsx",
+                                lineNumber: 67,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
                             fileName: "[project]/components/navigation.tsx",
                             lineNumber: 66,
                             columnNumber: 11
@@ -157,18 +147,18 @@ function Navigation({ onRequestAccess }) {
                                 className: "h-[18px] w-[18px] text-white"
                             }, void 0, false, {
                                 fileName: "[project]/components/navigation.tsx",
-                                lineNumber: 92,
+                                lineNumber: 89,
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$564$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                 className: "h-[18px] w-[18px] text-white"
                             }, void 0, false, {
                                 fileName: "[project]/components/navigation.tsx",
-                                lineNumber: 94,
+                                lineNumber: 91,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/navigation.tsx",
-                            lineNumber: 86,
+                            lineNumber: 83,
                             columnNumber: 11
                         }, this)
                     ]
@@ -218,7 +208,7 @@ function Navigation({ onRequestAccess }) {
                                     children: link.label
                                 }, link.href, false, {
                                     fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 114,
                                     columnNumber: 17
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -232,7 +222,7 @@ function Navigation({ onRequestAccess }) {
                                         children: "Sign In"
                                     }, void 0, false, {
                                         fileName: "[project]/components/navigation.tsx",
-                                        lineNumber: 128,
+                                        lineNumber: 125,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -247,29 +237,29 @@ function Navigation({ onRequestAccess }) {
                                         children: "Request Access"
                                     }, void 0, false, {
                                         fileName: "[project]/components/navigation.tsx",
-                                        lineNumber: 131,
+                                        lineNumber: 128,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/navigation.tsx",
-                                lineNumber: 127,
+                                lineNumber: 124,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/navigation.tsx",
-                        lineNumber: 115,
+                        lineNumber: 112,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/navigation.tsx",
-                    lineNumber: 103,
+                    lineNumber: 100,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/navigation.tsx",
-                lineNumber: 101,
+                lineNumber: 98,
                 columnNumber: 7
             }, this)
         ]

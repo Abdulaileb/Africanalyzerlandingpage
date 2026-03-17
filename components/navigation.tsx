@@ -64,9 +64,6 @@ export default function Navigation({ onRequestAccess }: NavigationProps) {
 
           {/* Right side (desktop) */}
           <div className="hidden items-center gap-4 md:flex">
-            <button className="text-sm text-white/50 transition-colors duration-150 hover:text-white">
-              Sign In
-            </button>
             <motion.button
               onClick={onRequestAccess}
               className="rounded-full px-5 py-2 text-[13px] font-semibold text-white"

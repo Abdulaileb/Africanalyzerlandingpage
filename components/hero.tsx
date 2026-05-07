@@ -520,7 +520,7 @@ export default function Hero() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.1em]" style={{ color: "rgba(148,163,184,0.6)" }}>
-                  Vigil Console
+                  Vigile Console
                 </p>
                 <p className="mt-1 text-lg font-bold text-white">Live risk overview</p>
               </div>

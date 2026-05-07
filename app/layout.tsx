@@ -11,8 +11,8 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'Vigil | Security Intelligence Platform',
-  description: 'Vigil delivers real-time log analysis and AI-powered threat detection for African institutions. Monitor your infrastructure and respond to threats fast.',
+  title: 'Vigile | Security Intelligence Platform',
+  description: 'Vigile delivers real-time log analysis and AI-powered threat detection for African institutions. Monitor your infrastructure and respond to threats fast.',
   generator: 'v0.app',
   keywords: ['cybersecurity', 'log analysis', 'threat detection', 'AI security', 'Africa', 'SIEM'],
 }

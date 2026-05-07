@@ -10,7 +10,7 @@ interface NavigationProps {
 }
 
 const navLinks = [
-  { label: "Why Vigil", href: "#features" },
+  { label: "Why Vigile", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Live Alerts", href: "#live-detection" },
   { label: "Use Cases", href: "#use-cases" },
@@ -54,7 +54,7 @@ export default function Navigation({ onRequestAccess }: NavigationProps) {
               />
             </div>
             <span className="text-[15px] font-bold tracking-[-0.02em] text-white">
-              VIGIL
+              VIGILE
             </span>
           </a>
 

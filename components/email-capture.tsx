@@ -113,7 +113,7 @@
 //         >
 //           <h2 className="mb-3 text-balance" style={{ fontSize: "1.9rem", fontWeight: 800, color: "white", letterSpacing: "-0.03em" }}>
 //             Be among the first to experience{" "}
-//             <span style={{ color: "#2563EB" }}>Vigil</span>
+//             <span style={{ color: "#2563EB" }}>Vigile</span>
 //           </h2>
 //           <p className="mb-8 text-[15px]" style={{ color: "rgba(255,255,255,0.5)" }}>
 //             Request early access and we{"'"}ll contact you within 24 hours to activate your dashboard.
@@ -235,7 +235,7 @@ export default function EmailCapture() {
             Security clarity shouldnt require a security team.
           </h2>
           <p className="mb-8 text-[15px]" style={{ color: "rgba(255,255,255,0.5)" }}>
-            Book a walkthrough and see how Vigil turns noise into insight.
+            Book a walkthrough and see how Vigile turns noise into insight.
           </p>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">

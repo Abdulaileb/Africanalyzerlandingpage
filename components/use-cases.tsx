@@ -88,7 +88,7 @@
 //             Built for your organization
 //           </h2>
 //           <p className="mt-4" style={{ color: "#6B7280", fontSize: "1rem" }}>
-//             Universities, enterprises, or security operations centers — Vigil fits your scale.
+//             Universities, enterprises, or security operations centers — Vigile fits your scale.
 //           </p>
 //         </motion.div>
 
@@ -275,7 +275,6 @@ export default function UseCases() {
               <motion.div
                 key={i}
                 variants={itemVariants}
-                className="overflow-hidden rounded-[14px] bg-white"
                 style={{
                   border: "1px solid rgba(0,0,0,0.07)",
                   boxShadow: "0 2px 16px rgba(0,0,0,0.06)",

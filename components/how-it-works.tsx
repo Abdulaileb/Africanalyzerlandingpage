@@ -41,7 +41,7 @@
 //           <Shield className="h-5 w-5 text-white" />
 //         </div>
 //         <div>
-//           <p className="text-sm font-bold text-white">Welcome to Vigil</p>
+//           <p className="text-sm font-bold text-white">Welcome to Vigile</p>
 //           <p className="text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>Connect your first log source to get started</p>
 //         </div>
 //       </div>
@@ -230,7 +230,7 @@ const steps = [
     tag: "CONNECT",
     title: "Connect devices",
     body: "Install the lightweight agent or connect logs via HTTPS. Start collecting security events in minutes.",
-    command: "curl -fsSL https://vigil.example/install | sh",
+    command: "curl -fsSL https://vigile.example/install | sh",
     mockup: "welcome",
   },
   {
@@ -263,7 +263,7 @@ function MockupWelcome() {
           <Shield className="h-5 w-5 text-white" />
         </div>
         <div>
-          <p className="text-sm font-bold text-white">Welcome to Vigil</p>
+          <p className="text-sm font-bold text-white">Welcome to Vigile</p>
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>Connect your first log source — ready in 30 minutes</p>
         </div>
       </div>

@@ -22,10 +22,10 @@ export async function POST(request: Request) {
 
   const resend = new Resend(resendApiKey)
 
-  const subject = "Vigil demo request received"
+  const subject = "Vigile demo request received"
   const html = `
     <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-      <h2>Thanks for requesting a Vigil demo</h2>
+      <h2>Thanks for requesting a Vigile demo</h2>
       <p>We received your request and will reach out shortly.</p>
       <p><strong>Name:</strong> ${name || "N/A"}</p>
       <p><strong>Organization:</strong> ${organization || "N/A"}</p>

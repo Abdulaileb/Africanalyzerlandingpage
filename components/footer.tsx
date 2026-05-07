@@ -28,7 +28,7 @@ export default function Footer() {
                 />
               </div>
               <span className="text-[15px] font-bold tracking-[-0.02em] text-white">
-                VIGIL
+                VIGILE
               </span>
             </div>
             <p className="mt-3.5 max-w-[200px] text-[13px] leading-relaxed" style={{ color: "rgba(255,255,255,0.4)" }}>
@@ -83,7 +83,7 @@ export default function Footer() {
           style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.25)" }}>
-            {"© 2025 Vigil. All rights reserved."}
+            {"© 2025 Vigile. All rights reserved."}
           </p>
           <div className="flex gap-6">
             {["Privacy", "Terms", "Cookies"].map((l) => (

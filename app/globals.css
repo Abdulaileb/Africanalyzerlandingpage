@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Vigil Design Tokens */
+  /* Vigile Design Tokens */
   --bg-darkest: #03070F;
   --bg-dark: #070D1A;
   --bg-card: #0D1526;
@@ -29,7 +29,7 @@
   --border-dark: rgba(255,255,255,0.07);
   --border-light: rgba(0,0,0,0.07);
 
-  /* shadcn tokens mapped to Vigil palette */
+  /* shadcn tokens mapped to Vigile palette */
   --background: #03070F;
   --foreground: #FFFFFF;
   --card: #0D1526;

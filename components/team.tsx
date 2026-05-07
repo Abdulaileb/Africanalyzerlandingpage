@@ -7,7 +7,7 @@ import { Linkedin, Github, Twitter, Mail } from "lucide-react"
 const founder = {
   name: "Abdulai Tamba Lebbie",
   role: "FOUNDER & LEAD ENGINEER",
-  bio: "Abdulai is the Founder and Tech Lead of Vigil. With a background in Information Technology and a deep interest in AI and data systems, he focuses on building practical digital solutions that address real challenges across Africa. He is passionate about secure system design and combines clean development practices with a strong emphasis on performance and long-term maintainability.",
+  bio: "Abdulai is the Founder and Tech Lead of Vigile. With a background in Information Technology and a deep interest in AI and data systems, he focuses on building practical digital solutions that address real challenges across Africa. He is passionate about secure system design and combines clean development practices with a strong emphasis on performance and long-term maintainability.",
   skills: ["AI & Machine Learning", "Data Analytics", "Full Stack Development", "Cloud Architecture"],
   photo: "/team/lebbie.webp",
 }
@@ -73,7 +73,7 @@ export default function Team() {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 className="text-balance text-white" style={{ fontSize: "clamp(2.2rem, 4vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.05 }}>
-            The mind behind Vigil
+            The mind behind Vigile
           </h2>
           <p className="mt-4" style={{ color: "rgba(255,255,255,0.5)", fontSize: "1rem" }}>
             Founder-led security infrastructure for modern African institutions.

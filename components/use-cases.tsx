@@ -167,41 +167,44 @@
 // "use client"
 
 import { motion } from "framer-motion"
-import { GraduationCap, Building2, ShieldCheck, CheckCircle2 } from "lucide-react"
+import { GraduationCap, Building2, ShieldCheck, Truck, Hospital, Landmark, CheckCircle2 } from "lucide-react"
 
 const cases = [
   {
-    icon: GraduationCap,
-    title: "Universities",
-    body: "Monitor campus networks, protect student data, and pass audits without a dedicated SOC team.",
-    benefits: [
-      "Protect student & faculty records",
-      "Monitor research infrastructure",
-      "Support cybersecurity education and labs",
-      "Detect insider and account-sharing issues",
-    ],
+    icon: Hospital,
+    title: "Clinics",
+    body: "Protect patient data, monitor shared devices, and stay compliant without a SOC.",
+    benefits: ["Protect patient records", "Detect risky logins", "Audit-ready reporting"],
   },
   {
     icon: Building2,
-    title: "SMEs & Enterprises",
-    body: "Centralise security logs, meet compliance, and understand what's happening across offices and cloud apps.",
-    benefits: [
-      "Centralised log management",
-      "Compliance & audit reporting",
-      "Early breach detection",
-      "Executive-friendly reports",
-    ],
+    title: "SMEs",
+    body: "Get clear visibility across cloud apps, endpoints, and networks with minimal setup.",
+    benefits: ["Early breach detection", "Executive-ready reports", "Fast onboarding"],
+  },
+  {
+    icon: GraduationCap,
+    title: "Schools",
+    body: "Monitor campus networks, reduce account sharing, and secure student systems.",
+    benefits: ["Student account protection", "Network anomaly alerts", "Low IT overhead"],
+  },
+  {
+    icon: Truck,
+    title: "Logistics",
+    body: "Track suspicious access across warehouses, fleets, and supply-chain systems.",
+    benefits: ["Geo-based alerts", "Shift-based visibility", "Third-party access control"],
+  },
+  {
+    icon: Landmark,
+    title: "Municipalities",
+    body: "Secure public services and meet regulatory requirements with confidence.",
+    benefits: ["RBAC for staff", "Encrypted ingestion", "Compliance coverage"],
   },
   {
     icon: ShieldCheck,
-    title: "Security Teams / MSPs",
-    body: "Offer managed detection and response to many clients from one dashboard.",
-    benefits: [
-      "Rapid incident response",
-      "Multi-tenant views for MSPs",
-      "Automated incident reports",
-      "API integrations into your tools",
-    ],
+    title: "MSPs",
+    body: "Deliver managed detection and response across multiple clients.",
+    benefits: ["Multi-tenant isolation", "Unified alerting", "Client reporting"],
   },
 ]
 
@@ -251,10 +254,10 @@ export default function UseCases() {
               color: "#0A0F1F",
             }}
           >
-            Built for your organization
+            Built for teams without a SOC
           </h2>
           <p className="mt-4" style={{ color: "#6B7280", fontSize: "1rem" }}>
-            Universities, SMEs, or managed service providers — Vigil fits your scale.
+            Focused coverage for the organisations that need clarity fast.
           </p>
         </motion.div>
 

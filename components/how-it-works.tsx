@@ -228,22 +228,23 @@ const steps = [
   {
     number: "01",
     tag: "CONNECT",
-    title: "Sign up and connect your first log source",
-    body: "Create your account and send logs via our HTTPS API or lightweight agent. Connect firewalls, Windows servers, and cloud apps in under 30 minutes — no hardware, no VPN tunnels.",
+    title: "Connect devices",
+    body: "Install the lightweight agent or connect logs via HTTPS. Start collecting security events in minutes.",
+    command: "curl -fsSL https://vigil.example/install | sh",
     mockup: "welcome",
   },
   {
     number: "02",
     tag: "MONITOR",
-    title: "See threats appear in real time",
-    body: "Watch failed logins, firewall blocks, and suspicious activity appear on your live dashboard. Alerts reach your inbox the moment something serious needs attention.",
+    title: "We analyze activity in real time",
+    body: "See brute force attempts, port scans, malware beaconing, and suspicious admin behavior as they happen.",
     mockup: "feed",
   },
   {
     number: "03",
     tag: "INVESTIGATE",
-    title: "Let AI explain what's going on",
-    body: 'Ask questions in plain language: "Show me brute-force attacks from last night." Vigil summarises incidents, shows the chain of events, and suggests next steps you can take.',
+    title: "Get actionable alerts",
+    body: "Every alert includes a plain-English summary, risk level, and recommended next steps.",
     mockup: "chat",
   },
 ]
@@ -293,7 +294,7 @@ function MockupFeed() {
         <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#10B981" }} />
       </div>
       <div className="mb-3 flex items-center justify-between">
-        <span className="text-sm font-bold text-white">Threat Feed</span>
+        <span className="text-sm font-bold text-white">Live Alerts</span>
         <div className="flex items-center gap-1.5">
           <div className="h-1.5 w-1.5 rounded-full animate-pulse-dot" style={{ backgroundColor: "#10B981" }} />
           <span className="text-[11px]" style={{ color: "#0D9488" }}>Live</span>
@@ -325,26 +326,26 @@ function MockupChat() {
       </div>
       <div className="mb-3 flex items-center gap-2">
         <Bot className="h-4 w-4" style={{ color: "#2563EB" }} />
-        <span className="text-sm font-bold text-white">AI Security Assistant</span>
+        <span className="text-sm font-bold text-white">Recommended Actions</span>
       </div>
       <div className="space-y-3">
         <div className="rounded-lg p-3" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
           <p className="text-[13px] text-white/60">
-            {"Summarize the security events from the last 24 hours"}
+            {"Summarize the most critical alerts"}
           </p>
         </div>
         <div className="rounded-lg p-3" style={{ background: "rgba(37,99,235,0.08)", border: "1px solid rgba(37,99,235,0.15)" }}>
           <div className="flex items-start gap-2">
             <MessageSquare className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{ color: "#2563EB" }} />
             <p className="text-[13px] text-white/70">
-              {"In the last 24h, there were 3 critical alerts: 2 brute force attempts and 1 suspicious login. All were automatically blocked..."}
+              {"Block IPs with repeated failures, force reset for the admin account, and isolate the workstation for scan."}
             </p>
           </div>
         </div>
         <div className="flex items-center gap-2 rounded-lg p-2.5" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
           <input
             readOnly
-            placeholder="Ask about your security..."
+            placeholder="Ask about an alert..."
             className="flex-1 bg-transparent text-[13px] text-white/40 placeholder:text-white/25 focus:outline-none"
           />
           <Send className="h-3.5 w-3.5" style={{ color: "#2563EB" }} />
@@ -379,7 +380,7 @@ export default function HowItWorks() {
         >
           <div className="h-px flex-1" style={{ background: "rgba(0,0,0,0.12)" }} />
           <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.08em]" style={{ color: "#6B7280" }}>
-            Our workflow
+            How it works
           </span>
           <div className="h-px flex-1" style={{ background: "rgba(0,0,0,0.12)" }} />
         </motion.div>
@@ -399,7 +400,7 @@ export default function HowItWorks() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          How our platform makes security easier
+          How Vigil makes security manageable
         </motion.h2>
 
         {/* Steps */}
@@ -426,6 +427,14 @@ export default function HowItWorks() {
                   <p style={{ fontSize: "1rem", color: "#6B7280", lineHeight: 1.75 }} className="max-w-[400px]">
                     {step.body}
                   </p>
+                  {step.command && (
+                    <div
+                      className="mt-4 inline-flex items-center rounded-lg px-3 py-2 text-xs"
+                      style={{ background: "rgba(15,23,42,0.06)", border: "1px solid rgba(15,23,42,0.12)", color: "#0F172A" }}
+                    >
+                      <code>{step.command}</code>
+                    </div>
+                  )}
                 </div>
                 <div className={isEven ? "lg:order-1" : ""}>
                   <Mockup />

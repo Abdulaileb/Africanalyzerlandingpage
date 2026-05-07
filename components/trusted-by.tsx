@@ -73,15 +73,15 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { GraduationCap, Building2, ShieldCheck, Star } from "lucide-react"
+import { GraduationCap, Building2, ShieldCheck } from "lucide-react"
 
 const earlyAdopters = [
-  { name: "Higher Education", icon: GraduationCap, detail: "West African university pilot" },
-  { name: "SMEs", icon: Building2, detail: "Early-stage validation partners" },
-  { name: "Security Teams", icon: ShieldCheck, detail: "MSP pilot programme" },
-  { name: "Higher Education", icon: GraduationCap, detail: "West African university pilot" },
-  { name: "SMEs", icon: Building2, detail: "Early-stage validation partners" },
-  { name: "Security Teams", icon: ShieldCheck, detail: "MSP pilot programme" },
+  { name: "Higher Education", icon: GraduationCap, detail: "Campus networks" },
+  { name: "SMEs", icon: Building2, detail: "Growing businesses" },
+  { name: "Security Teams", icon: ShieldCheck, detail: "Managed response" },
+  { name: "Higher Education", icon: GraduationCap, detail: "Campus networks" },
+  { name: "SMEs", icon: Building2, detail: "Growing businesses" },
+  { name: "Security Teams", icon: ShieldCheck, detail: "Managed response" },
 ]
 
 export default function TrustedBy() {
@@ -101,7 +101,7 @@ export default function TrustedBy() {
             className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.08em]"
             style={{ color: "rgba(255,255,255,0.3)" }}
           >
-            Trusted by our early adopters in higher education and SMEs
+            Trusted by security-minded teams across education and SMEs
           </span>
           <div className="h-px flex-1" style={{ background: "rgba(255,255,255,0.08)" }} />
         </motion.div>

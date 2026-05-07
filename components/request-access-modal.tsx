@@ -27,9 +27,9 @@ export default function RequestAccessModal({ open, onClose }: RequestAccessModal
     try {
       await submitFullAccessRequest(email, name, organization)
       setSuccess(true)
-      toast.success("Access request submitted successfully!")
+      toast.success("Demo request submitted successfully!")
     } catch {
-      setError("Failed to submit request. Please try again.")
+      setError("Failed to submit demo request. Please try again.")
     } finally {
       setLoading(false)
     }
@@ -76,9 +76,9 @@ export default function RequestAccessModal({ open, onClose }: RequestAccessModal
                 <motion.div key="form" initial={{ opacity: 1 }} exit={{ opacity: 0 }}>
                   {/* Header */}
                   <div className="relative px-7 pt-6 pb-5" style={{ borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
-                    <h3 className="text-xl font-bold text-white">Request Early Access</h3>
+                    <h3 className="text-xl font-bold text-white">Request a Demo</h3>
                     <p className="mt-1.5 text-[13px]" style={{ color: "rgba(255,255,255,0.5)" }}>
-                      Fill out the form below and we{"'"}ll contact you within 24 hours.
+                      Share a few details and we will schedule a walkthrough.
                     </p>
                     <button
                       onClick={handleClose}
@@ -195,7 +195,7 @@ export default function RequestAccessModal({ open, onClose }: RequestAccessModal
                           Submitting...
                         </>
                       ) : (
-                        "Request Access"
+                        "Request Demo"
                       )}
                     </motion.button>
 
@@ -225,9 +225,9 @@ export default function RequestAccessModal({ open, onClose }: RequestAccessModal
                     <CheckCircle className="h-7 w-7" style={{ color: "#0D9488" }} />
                   </motion.div>
 
-                  <h3 className="text-[22px] font-extrabold text-white">Request Received!</h3>
+                  <h3 className="text-[22px] font-extrabold text-white">Request Received</h3>
                   <p className="mt-2 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
-                    We{"'"}ll review your application and contact you within 24 hours at{" "}
+                    We will reach out to schedule your demo at{" "}
                     <span className="text-white">{email}</span>.
                   </p>
 
@@ -241,8 +241,8 @@ export default function RequestAccessModal({ open, onClose }: RequestAccessModal
                   >
                     {[
                       "Confirmation email sent shortly",
-                      "Our team reviews your application",
-                      "Login credentials within 24 hours",
+                      "We will confirm a time that works",
+                      "Tailored demo based on your environment",
                     ].map((text, i) => (
                       <div key={i} className="flex items-center gap-2.5 py-1.5">
                         <ArrowRight className="h-3 w-3 shrink-0" style={{ color: "#2563EB" }} />

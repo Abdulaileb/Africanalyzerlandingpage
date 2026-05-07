@@ -284,66 +284,55 @@
 // }
 
 
-"use client"
-
-import { useState } from "react"
 import { motion } from "framer-motion"
-import { Check, Lock, Clock, ArrowRight } from "lucide-react"
+import { Check, ArrowRight } from "lucide-react"
 
 const plans = [
   {
-    name: "Free",
-    description: "Perfect for getting started with basic security monitoring.",
-    monthlyPrice: 0,
-    yearlyPrice: 0,
-    cta: "Get Started",
+    name: "Starter",
+    description: "For small teams that need clear visibility fast.",
+    price: "$79",
+    cadence: "/month",
+    cta: "Start Free Trial",
     style: "outline" as const,
     features: [
-      { text: "Basic dashboard", included: true },
-      { text: "Up to 1GB logs/month", included: true },
-      { text: "Real-time monitoring", included: true },
+      { text: "Unified alerts dashboard", included: true },
+      { text: "Up to 50 GB logs / month", included: true },
       { text: "7-day log retention", included: true },
       { text: "Email support", included: true },
-      { text: "No AI Assistant", included: false },
-      { text: "No team access", included: false },
+      { text: "Recommended actions", included: true },
     ],
   },
   {
-    name: "Standard",
-    description: "For SMEs and universities just starting with continuous monitoring.",
-    monthlyPrice: 99,
-    yearlyPrice: 990,
-    cta: "Start Free Trial",
+    name: "Professional",
+    description: "For growing teams that need deeper context and automation.",
+    price: "$199",
+    cadence: "/month",
+    cta: "Book Demo",
     style: "primary" as const,
     popular: true,
     features: [
-      { text: "Full dashboard", included: true },
       { text: "Unlimited log ingestion", included: true },
-      { text: "Real-time alerts", included: true },
       { text: "90-day log retention", included: true },
-      { text: "Team access up to 10 users", included: true },
-      { text: "Role-based permissions", included: true },
+      { text: "Role-based access", included: true },
+      { text: "Workflow-ready reports", included: true },
+      { text: "Slack + email alerts", included: true },
       { text: "Priority support", included: true },
-      { text: "API access", included: true },
     ],
   },
   {
-    name: "Premium",
-    description: "For MSPs and institutions that need AI-assisted investigations and long-term retention.",
-    monthlyPrice: 299,
-    yearlyPrice: 2990,
-    cta: "Contact Sales",
+    name: "MSSP",
+    description: "Multi-tenant visibility and client reporting for service providers.",
+    price: "Custom",
+    cadence: "",
+    cta: "Request Demo",
     style: "dark" as const,
     features: [
-      { text: "Everything in Standard", included: true },
-      { text: "AI Security Assistant", included: true },
-      { text: "Automated incident reports", included: true },
-      { text: "Advanced analytics", included: true },
-      { text: "Unlimited log retention", included: true },
-      { text: "Unlimited team members", included: true },
-      { text: "24/7 priority support", included: true },
+      { text: "Multi-tenant isolation", included: true },
+      { text: "Client-facing reports", included: true },
+      { text: "SLA-backed monitoring", included: true },
+      { text: "Dedicated success engineer", included: true },
       { text: "Custom integrations", included: true },
-      { text: "Dedicated account manager", included: true },
     ],
   },
 ]
@@ -359,32 +348,9 @@ const itemVariants = {
 }
 
 export default function Pricing() {
-  const [yearly, setYearly] = useState(false)
-
   return (
     <section id="pricing" style={{ backgroundColor: "#F2F5FA" }} className="py-24 lg:py-[100px]">
       <div className="mx-auto max-w-[1200px] px-6">
-        {/* Coming Soon badge */}
-        <motion.div
-          className="mb-6 flex justify-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div
-            className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5"
-            style={{
-              background: "rgba(245,158,11,0.1)",
-              border: "1px solid rgba(245,158,11,0.25)",
-            }}
-          >
-            <Clock className="h-[13px] w-[13px]" style={{ color: "#F59E0B" }} />
-            <span className="text-xs font-semibold" style={{ color: "#D97706" }}>
-            </span>
-          </div>
-        </motion.div>
-
         {/* Headline */}
         <motion.div
           className="mb-12 text-center"
@@ -399,45 +365,6 @@ export default function Pricing() {
           <p className="mt-4" style={{ color: "#6B7280", fontSize: "1rem" }}>
             Choose the plan that fits your security needs.
           </p>
-          <p className="mt-2 text-sm font-medium" style={{ color: "#2563EB" }}>
-            Pilot pricing available for universities and early adopters — ask us about 3-month validation pilots.
-          </p>
-
-          {/* Toggle */}
-          <div className="mt-8 flex justify-center">
-            <div
-              className="inline-flex rounded-lg p-1"
-              style={{ background: "rgba(0,0,0,0.05)", border: "1px solid rgba(0,0,0,0.08)" }}
-            >
-              <button
-                onClick={() => setYearly(false)}
-                className="rounded-md px-[18px] py-[7px] text-sm font-medium transition-all"
-                style={{
-                  backgroundColor: !yearly ? "white" : "transparent",
-                  color: !yearly ? "#0A0F1F" : "#6B7280",
-                  fontWeight: !yearly ? 700 : 500,
-                  boxShadow: !yearly ? "0 1px 6px rgba(0,0,0,0.1)" : "none",
-                }}
-              >
-                Monthly
-              </button>
-              <button
-                onClick={() => setYearly(true)}
-                className="flex items-center gap-2 rounded-md px-[18px] py-[7px] text-sm font-medium transition-all"
-                style={{
-                  backgroundColor: yearly ? "white" : "transparent",
-                  color: yearly ? "#0A0F1F" : "#6B7280",
-                  fontWeight: yearly ? 700 : 500,
-                  boxShadow: yearly ? "0 1px 6px rgba(0,0,0,0.1)" : "none",
-                }}
-              >
-                Yearly
-                <span className="rounded px-1.5 py-[1px] text-[10px] font-bold" style={{ background: "rgba(13,148,136,0.1)", color: "#0D9488" }}>
-                  Save 17%
-                </span>
-              </button>
-            </div>
-          </div>
         </motion.div>
 
         {/* Cards */}
@@ -479,13 +406,10 @@ export default function Pricing() {
               {/* Price */}
               <div className="mb-6">
                 <span style={{ fontSize: "3rem", fontWeight: 900, letterSpacing: "-0.04em", color: "#0A0F1F" }}>
-                  ${yearly && plan.yearlyPrice > 0 ? Math.round(plan.yearlyPrice / 12) : plan.monthlyPrice}
+                  {plan.price}
                 </span>
-                <span className="text-[15px]" style={{ color: "#6B7280" }}>/month</span>
-                {yearly && plan.yearlyPrice > 0 && (
-                  <p className="mt-1 text-sm" style={{ color: "#0D9488" }}>
-                    ${plan.yearlyPrice.toLocaleString()} billed annually
-                  </p>
+                {plan.cadence && (
+                  <span className="text-[15px]" style={{ color: "#6B7280" }}>{plan.cadence}</span>
                 )}
               </div>
 
@@ -512,27 +436,15 @@ export default function Pricing() {
                 <div className="space-y-2.5">
                   {plan.features.map((f, j) => (
                     <div key={j} className="flex items-start gap-2.5">
-                      {f.included ? (
-                        <div
-                          className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-[5px]"
-                          style={{ background: "rgba(37,99,235,0.1)" }}
-                        >
-                          <Check className="h-[15px] w-[15px]" style={{ color: "#2563EB" }} />
-                        </div>
-                      ) : (
-                        <div
-                          className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-[5px]"
-                          style={{ background: "rgba(0,0,0,0.04)" }}
-                        >
-                          <Lock className="h-3 w-3" style={{ color: "#D1D5DB" }} />
-                        </div>
-                      )}
+                      <div
+                        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-[5px]"
+                        style={{ background: "rgba(37,99,235,0.1)" }}
+                      >
+                        <Check className="h-[15px] w-[15px]" style={{ color: "#2563EB" }} />
+                      </div>
                       <span
                         className="text-[13px]"
-                        style={{
-                          color: f.included ? "#374151" : "#9CA3AF",
-                          textDecoration: f.included ? "none" : "line-through",
-                        }}
+                        style={{ color: "#374151" }}
                       >
                         {f.text}
                       </span>
@@ -554,16 +466,16 @@ export default function Pricing() {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <div>
-            <h3 className="text-lg font-bold text-white">Need a custom solution?</h3>
+            <h3 className="text-lg font-bold text-white">Need a custom rollout?</h3>
             <p className="mt-1 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
-              Contact Sales for enterprise pricing with custom features.
+              We help with migrations, compliance, and enterprise requirements.
             </p>
           </div>
           <button
             className="flex items-center gap-2 rounded-[10px] px-6 py-3 text-sm font-semibold text-white transition-colors"
             style={{ border: "1px solid rgba(255,255,255,0.2)" }}
           >
-            Contact Sales
+            Request Demo
             <ArrowRight className="h-4 w-4" />
           </button>
         </motion.div>

@@ -181,37 +181,13 @@
 
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Mail, Loader2, CheckCircle } from "lucide-react"
 import { toast } from "sonner"
 import { submitWaitlistEmail } from "@/lib/supabase"
 
-function useCountdown(targetISO: string) {
-  const targetRef = useRef(new Date(targetISO).getTime())
-  const [time, setTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-
-  useEffect(() => {
-    const calc = () => {
-      const now = Date.now()
-      const diff = Math.max(0, targetRef.current - now)
-      setTime({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / (1000 * 60)) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
-      })
-    }
-    calc()
-    const id = setInterval(calc, 1000)
-    return () => clearInterval(id)
-  }, []) // no dependency on target — ref is stable
-
-  return time
-}
-
 export default function EmailCapture() {
-  const countdown = useCountdown("2026-04-01")
   const [email, setEmail] = useState("")
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -223,65 +199,22 @@ export default function EmailCapture() {
     try {
       await submitWaitlistEmail(email)
       setSuccess(true)
-      toast.success("Successfully joined the waitlist!")
+      toast.success("Demo request submitted!")
       setEmail("")
       setTimeout(() => setSuccess(false), 3000)
     } catch {
-      toast.error("Failed to submit. Please try again.")
+      toast.error("Failed to submit demo request. Please try again.")
     } finally {
       setLoading(false)
     }
   }
 
-  const units = [
-    { value: countdown.days, label: "Days" },
-    { value: countdown.hours, label: "Hours" },
-    { value: countdown.minutes, label: "Minutes" },
-    { value: countdown.seconds, label: "Seconds" },
-  ]
-
   return (
-    <section style={{ background: "linear-gradient(180deg, #070D1A 0%, #03070F 100%)" }} className="py-24 lg:py-[100px]">
+    <section id="request-demo" style={{ background: "linear-gradient(180deg, #070D1A 0%, #03070F 100%)" }} className="py-24 lg:py-[100px]">
       <div className="mx-auto max-w-[1200px] px-6">
-        {/* Countdown */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <p className="text-sm font-semibold" style={{ color: "rgba(255,255,255,0.45)" }}>
-            Launching Public Beta
-          </p>
-          <p className="mt-1 text-sm" style={{ color: "rgba(255,255,255,0.3)" }}>
-            April 1, 2026
-          </p>
-
-          <div className="mt-6 flex justify-center gap-3">
-            {units.map((u, i) => (
-              <div
-                key={i}
-                className="flex h-[76px] w-[76px] flex-col items-center justify-center rounded-xl"
-                style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                }}
-              >
-                <span className="text-white" style={{ fontSize: "1.9rem", fontWeight: 900, letterSpacing: "-0.04em" }}>
-                  {String(u.value).padStart(2, "0")}
-                </span>
-                <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.07em]" style={{ color: "rgba(255,255,255,0.3)" }}>
-                  {u.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* CTA card */}
         <motion.div
-          className="mx-auto mt-14 max-w-[600px] rounded-[20px] p-10 text-center lg:p-[52px_48px]"
+          className="mx-auto max-w-[720px] rounded-[20px] p-10 text-center lg:p-[52px_48px]"
           style={{
             backgroundColor: "#0D1526",
             border: "1px solid rgba(37,99,235,0.2)",
@@ -293,11 +226,10 @@ export default function EmailCapture() {
           transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 className="mb-3 text-balance" style={{ fontSize: "1.9rem", fontWeight: 800, color: "white", letterSpacing: "-0.03em" }}>
-            Be among the first to secure your logs with{" "}
-            <span style={{ color: "#2563EB" }}>Vigil</span>
+            Security teams are expensive. Security visibility shouldn't be.
           </h2>
           <p className="mb-8 text-[15px]" style={{ color: "rgba(255,255,255,0.5)" }}>
-            Request early access and we{"'"}ll contact you within 24 hours to set up a pilot for your SME or university.
+            Book a guided walkthrough and see how Vigil turns messy logs into clear, actionable alerts.
           </p>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
@@ -345,13 +277,13 @@ export default function EmailCapture() {
                   Submitted!
                 </>
               ) : (
-                "Request Access"
+                "Request Demo"
               )}
             </motion.button>
           </form>
 
           <p className="mt-3.5 text-xs" style={{ color: "rgba(255,255,255,0.25)" }}>
-            We{"'"}re in the validation phase — limited pilot slots available for 2026.
+            We respect your privacy. No spam — ever.
           </p>
         </motion.div>
       </div>

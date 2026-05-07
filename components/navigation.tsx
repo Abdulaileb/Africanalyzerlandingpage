@@ -10,9 +10,11 @@ interface NavigationProps {
 }
 
 const navLinks = [
-  { label: "Features", href: "#features" },
+  { label: "Why Vigil", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Live Alerts", href: "#live-detection" },
   { label: "Use Cases", href: "#use-cases" },
+  { label: "Trust", href: "#trust" },
   { label: "Pricing", href: "#pricing" },
 ]
 
@@ -82,7 +84,7 @@ export default function Navigation({ onRequestAccess }: NavigationProps) {
               whileTap={{ scale: 0.97 }}
               transition={{ duration: 0.15 }}
             >
-              Request Access
+              Book Demo
             </motion.button>
           </div>
 
@@ -140,7 +142,7 @@ export default function Navigation({ onRequestAccess }: NavigationProps) {
                   className="rounded-[10px] py-3 text-sm font-semibold text-white"
                   style={{ backgroundColor: "#2563EB" }}
                 >
-                  Request Access
+                  Book Demo
                 </button>
               </div>
             </div>

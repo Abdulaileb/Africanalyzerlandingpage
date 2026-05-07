@@ -6,8 +6,9 @@ import Hero from "@/components/hero"
 import TrustedBy from "@/components/trusted-by"
 import HowItWorks from "@/components/how-it-works"
 import Features from "@/components/features"
+import LiveDetection from "@/components/live-detection"
 import UseCases from "@/components/use-cases"
-import Team from "@/components/team"
+import TrustInfrastructure from "@/components/trust-infrastructure"
 import Pricing from "@/components/pricing"
 import EmailCapture from "@/components/email-capture"
 import Footer from "@/components/footer"
@@ -19,12 +20,13 @@ export default function Home() {
   return (
     <main>
       <Navigation onRequestAccess={() => setModalOpen(true)} />
-      <Hero onRequestAccess={() => setModalOpen(true)} />
+      <Hero />
       <TrustedBy />
-      <HowItWorks />
       <Features />
+      <HowItWorks />
+      <LiveDetection />
       <UseCases />
-      <Team />
+      <TrustInfrastructure />
       <Pricing />
       <EmailCapture />
       <Footer />

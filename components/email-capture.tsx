@@ -185,7 +185,6 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Mail, Loader2, CheckCircle } from "lucide-react"
 import { toast } from "sonner"
-import { submitWaitlistEmail } from "@/lib/supabase"
 
 export default function EmailCapture() {
   const [email, setEmail] = useState("")
@@ -197,7 +196,14 @@ export default function EmailCapture() {
     if (!email) return
     setLoading(true)
     try {
-      await submitWaitlistEmail(email)
+      const response = await fetch("/api/demo-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, source: "footer-cta" }),
+      })
+      if (!response.ok) {
+        throw new Error("Request failed")
+      }
       setSuccess(true)
       toast.success("Demo request submitted!")
       setEmail("")

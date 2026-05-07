@@ -4,7 +4,6 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, User, Mail, Building2, Loader2, CheckCircle, AlertCircle, ArrowRight } from "lucide-react"
 import { toast } from "sonner"
-import { submitFullAccessRequest } from "@/lib/supabase"
 
 interface RequestAccessModalProps {
   open: boolean
@@ -25,7 +24,14 @@ export default function RequestAccessModal({ open, onClose }: RequestAccessModal
     setLoading(true)
     setError("")
     try {
-      await submitFullAccessRequest(email, name, organization)
+      const response = await fetch("/api/demo-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, name, organization, source: "modal" }),
+      })
+      if (!response.ok) {
+        throw new Error("Request failed")
+      }
       setSuccess(true)
       toast.success("Demo request submitted successfully!")
     } catch {

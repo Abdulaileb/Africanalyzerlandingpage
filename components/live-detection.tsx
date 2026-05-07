@@ -73,7 +73,7 @@ export default function LiveDetection() {
               color: "#0A0F1F",
             }}
           >
-            Real alerts, clear next steps
+            Every alert tells you what happened — and what to do next
           </h2>
           <p className="mt-4" style={{ color: "#6B7280", fontSize: "1rem" }}>
             Each alert includes the risk level and recommended action so teams can respond fast.

@@ -360,7 +360,7 @@ export default function Pricing() {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 style={{ fontSize: "clamp(2.2rem, 4vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.05, color: "#0A0F1F" }}>
-            Simple, transparent pricing
+            Clear pricing for real-world teams. No surprises.
           </h2>
           <p className="mt-4" style={{ color: "#6B7280", fontSize: "1rem" }}>
             Choose the plan that fits your security needs.

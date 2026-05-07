@@ -32,7 +32,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-3.5 max-w-[200px] text-[13px] leading-relaxed" style={{ color: "rgba(255,255,255,0.4)" }}>
-              Security intelligence built for modern African institutions.
+              Modern security for the organizations that need it most.
             </p>
             <div className="mt-5 flex gap-2">
               {[Twitter, Linkedin, Github].map((Icon, i) => (

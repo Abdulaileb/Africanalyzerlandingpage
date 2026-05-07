@@ -254,7 +254,7 @@ export default function UseCases() {
               color: "#0A0F1F",
             }}
           >
-            Built for teams without a SOC
+            Designed for clinics, schools, SMEs, logistics, municipalities, and MSPs
           </h2>
           <p className="mt-4" style={{ color: "#6B7280", fontSize: "1rem" }}>
             Focused coverage for the organisations that need clarity fast.

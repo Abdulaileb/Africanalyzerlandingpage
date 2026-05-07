@@ -400,7 +400,7 @@ export default function HowItWorks() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          How Vigil makes security manageable
+          Security visibility in three simple steps
         </motion.h2>
 
         {/* Steps */}

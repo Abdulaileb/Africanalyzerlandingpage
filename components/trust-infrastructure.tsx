@@ -65,7 +65,7 @@ export default function TrustInfrastructure() {
               lineHeight: 1.05,
             }}
           >
-            Built for trust, designed for real-world ops
+            Enterprise-grade foundations for real-world operations
           </h2>
           <p className="mt-4" style={{ color: "rgba(255,255,255,0.55)", fontSize: "1rem" }}>
             Everything you need to meet compliance and protect critical systems.

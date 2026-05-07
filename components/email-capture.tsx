@@ -226,10 +226,10 @@ export default function EmailCapture() {
           transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 className="mb-3 text-balance" style={{ fontSize: "1.9rem", fontWeight: 800, color: "white", letterSpacing: "-0.03em" }}>
-            Security teams are expensive. Security visibility shouldn't be.
+            Security clarity shouldnt require a security team.
           </h2>
           <p className="mb-8 text-[15px]" style={{ color: "rgba(255,255,255,0.5)" }}>
-            Book a guided walkthrough and see how Vigil turns messy logs into clear, actionable alerts.
+            Book a walkthrough and see how Vigil turns noise into insight.
           </p>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">

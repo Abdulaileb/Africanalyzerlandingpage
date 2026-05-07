@@ -444,7 +444,7 @@ export default function Hero() {
           >
             <ShieldCheck className="h-3.5 w-3.5" style={{ color: "#60A5FA" }} />
             <span className="text-xs font-semibold tracking-[0.03em]" style={{ color: "rgba(255,255,255,0.75)" }}>
-              Security clarity for lean teams
+              Security clarity for teams without security teams
             </span>
           </div>
 
@@ -459,8 +459,7 @@ export default function Hero() {
             }}
           >
             Threat detection
-            <br />
-            without the complexity.
+            that feels effortless.
           </h1>
 
           <p
@@ -471,8 +470,8 @@ export default function Hero() {
               lineHeight: 1.75,
             }}
           >
-            Detect brute-force attacks, suspicious logins, malware beaconing, and
-            reconnaissance in minutes without a dedicated security team.
+            Real-time visibility into the threats that matter, with clear next steps
+            for every alert.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">

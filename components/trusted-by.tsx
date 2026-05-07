@@ -101,7 +101,7 @@ export default function TrustedBy() {
             className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.08em]"
             style={{ color: "rgba(255,255,255,0.3)" }}
           >
-            Trusted by security-minded teams across education and SMEs
+            Trusted by education networks, growing SMEs, and teams delivering critical services
           </span>
           <div className="h-px flex-1" style={{ background: "rgba(255,255,255,0.08)" }} />
         </motion.div>

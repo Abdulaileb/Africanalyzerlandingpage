@@ -52,7 +52,7 @@ export default function Navigation({ onRequestAccess }: NavigationProps) {
               />
             </div>
             <span className="text-[15px] font-bold tracking-[-0.02em] text-white">
-              AFRIC-ANALYZER
+              VIGIL
             </span>
           </a>
 

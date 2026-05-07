@@ -253,11 +253,11 @@ const features = [
   {
     number: "01",
     title: "Real-Time Log Ingestion",
-    description: "Collect logs from firewalls, Windows, Linux, cloud apps and more via a secure HTTP API. AfricAnalyzer normalises every vendor format into one standard within milliseconds.",
+    description: "Collect logs from firewalls, Windows, Linux, cloud apps and more via a secure HTTP API. Vigil normalises every vendor format into one standard within milliseconds.",
     icon: Activity,
     premium: false,
     detail: {
-      fullDescription: "Collect logs from firewalls, Windows, Linux, cloud apps and more via a secure HTTP API. AfricAnalyzer normalises every vendor format into one standard within milliseconds — no proprietary hardware required.",
+      fullDescription: "Collect logs from firewalls, Windows, Linux, cloud apps and more via a secure HTTP API. Vigil normalises every vendor format into one standard within milliseconds — no proprietary hardware required.",
       benefits: [
         "Ingest from firewalls, Windows, Linux & cloud apps",
         "Secure HTTPS API or lightweight agent",

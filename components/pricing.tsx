@@ -95,7 +95,6 @@
 //           >
 //             <Clock className="h-[13px] w-[13px]" style={{ color: "#F59E0B" }} />
 //             <span className="text-xs font-semibold" style={{ color: "#D97706" }}>
-//               Launching April 2026
 //             </span>
 //           </div>
 //         </motion.div>
@@ -382,7 +381,6 @@ export default function Pricing() {
           >
             <Clock className="h-[13px] w-[13px]" style={{ color: "#F59E0B" }} />
             <span className="text-xs font-semibold" style={{ color: "#D97706" }}>
-              Launching April 2026
             </span>
           </div>
         </motion.div>

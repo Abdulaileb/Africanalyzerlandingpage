@@ -564,7 +564,7 @@ export default function Hero({ onRequestAccess }: HeroProps) {
               lineHeight: 1.75,
             }}
           >
-            AfricAnalyzer collects your firewall, Windows, and cloud logs into one
+            Vigil collects your firewall, Windows, and cloud logs into one
             dashboard and uses AI to highlight real attacks — so SMEs and universities can
             detect threats in minutes, not weeks.
           </p>

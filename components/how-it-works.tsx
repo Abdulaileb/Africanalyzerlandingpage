@@ -41,7 +41,7 @@
 //           <Shield className="h-5 w-5 text-white" />
 //         </div>
 //         <div>
-//           <p className="text-sm font-bold text-white">Welcome to Afric-Analyzer</p>
+//           <p className="text-sm font-bold text-white">Welcome to Vigil</p>
 //           <p className="text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>Connect your first log source to get started</p>
 //         </div>
 //       </div>
@@ -243,7 +243,7 @@ const steps = [
     number: "03",
     tag: "INVESTIGATE",
     title: "Let AI explain what's going on",
-    body: 'Ask questions in plain language: "Show me brute-force attacks from last night." AfricAnalyzer summarises incidents, shows the chain of events, and suggests next steps you can take.',
+    body: 'Ask questions in plain language: "Show me brute-force attacks from last night." Vigil summarises incidents, shows the chain of events, and suggests next steps you can take.',
     mockup: "chat",
   },
 ]
@@ -262,7 +262,7 @@ function MockupWelcome() {
           <Shield className="h-5 w-5 text-white" />
         </div>
         <div>
-          <p className="text-sm font-bold text-white">Welcome to Afric-Analyzer</p>
+          <p className="text-sm font-bold text-white">Welcome to Vigil</p>
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>Connect your first log source — ready in 30 minutes</p>
         </div>
       </div>

@@ -1,13 +1,13 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables');
-}
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Allow local dev to boot without Supabase configured.
+export const supabase = isSupabaseConfigured
+  ? createClient(supabaseUrl as string, supabaseAnonKey as string)
+  : null;
 
 // Types for our database
 export interface AccessRequest {
@@ -22,6 +22,15 @@ export interface AccessRequest {
 
 // Helper function to submit access request
 export async function submitAccessRequest(data: Omit<AccessRequest, 'id' | 'created_at' | 'updated_at'>) {
+  if (!isSupabaseConfigured || !supabase) {
+    return {
+      id: 'stubbed',
+      ...data,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+    };
+  }
+
   const { data: result, error } = await supabase
     .from('access_requests')
     .insert([data])

@@ -113,7 +113,7 @@
 //         >
 //           <h2 className="mb-3 text-balance" style={{ fontSize: "1.9rem", fontWeight: 800, color: "white", letterSpacing: "-0.03em" }}>
 //             Be among the first to experience{" "}
-//             <span style={{ color: "#2563EB" }}>Afric-Analyzer</span>
+//             <span style={{ color: "#2563EB" }}>Vigil</span>
 //           </h2>
 //           <p className="mb-8 text-[15px]" style={{ color: "rgba(255,255,255,0.5)" }}>
 //             Request early access and we{"'"}ll contact you within 24 hours to activate your dashboard.
@@ -294,7 +294,7 @@ export default function EmailCapture() {
         >
           <h2 className="mb-3 text-balance" style={{ fontSize: "1.9rem", fontWeight: 800, color: "white", letterSpacing: "-0.03em" }}>
             Be among the first to secure your logs with{" "}
-            <span style={{ color: "#2563EB" }}>AfricAnalyzer</span>
+            <span style={{ color: "#2563EB" }}>Vigil</span>
           </h2>
           <p className="mb-8 text-[15px]" style={{ color: "rgba(255,255,255,0.5)" }}>
             Request early access and we{"'"}ll contact you within 24 hours to set up a pilot for your SME or university.

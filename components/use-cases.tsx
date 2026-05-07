@@ -88,7 +88,7 @@
 //             Built for your organization
 //           </h2>
 //           <p className="mt-4" style={{ color: "#6B7280", fontSize: "1rem" }}>
-//             Universities, enterprises, or security operations centers — Afric-Analyzer fits your scale.
+//             Universities, enterprises, or security operations centers — Vigil fits your scale.
 //           </p>
 //         </motion.div>
 
@@ -254,7 +254,7 @@ export default function UseCases() {
             Built for your organization
           </h2>
           <p className="mt-4" style={{ color: "#6B7280", fontSize: "1rem" }}>
-            Universities, SMEs, or managed service providers — AfricAnalyzer fits your scale.
+            Universities, SMEs, or managed service providers — Vigil fits your scale.
           </p>
         </motion.div>
 

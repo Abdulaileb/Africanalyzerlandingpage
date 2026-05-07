@@ -458,9 +458,9 @@ export default function Hero() {
               color: "white",
             }}
           >
-            Enterprise-grade threat detection
+            Threat detection
             <br />
-            without the enterprise complexity.
+            without the complexity.
           </h1>
 
           <p

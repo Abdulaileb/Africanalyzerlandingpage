@@ -300,7 +300,7 @@ export default function Features() {
               lineHeight: 1.05,
             }}
           >
-            Most companies are too small for enterprise security — but too important to stay vulnerable.
+            Too small for enterprise security. Too important to stay exposed.
           </h2>
           <p className="mt-4" style={{ color: "rgba(255,255,255,0.55)", fontSize: "1rem" }}>
             Vigil closes the gap with a calmer, simpler security platform built for lean teams.

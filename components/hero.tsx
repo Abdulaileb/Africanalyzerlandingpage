@@ -436,7 +436,6 @@ function AnimatedCounter({ value, prefix = "", suffix = "" }: { value: number; p
 const stats = [
   { value: 0, prefix: "", suffix: "", label: "Live pilot running with a West African university", isStatic: true, staticDisplay: "Live" },
   { value: 1000, prefix: "", suffix: "+", label: "Security events analysed in first week" },
-  { value: 0, prefix: "", suffix: "", label: "Built by MSc AI & Cybersecurity engineers in Austria & Italy", isStatic: true, staticDisplay: "MSc" },
   { value: 0, prefix: "<30", suffix: " min", label: "Average setup time from signup to first alert", isStatic: true },
 ]
 
@@ -516,7 +515,7 @@ export default function Hero({ onRequestAccess }: HeroProps) {
       </motion.div>
 
       {/* Main content */}
-      <div className="relative mx-auto grid max-w-[1200px] gap-12 px-6 pt-36 pb-0 lg:grid-cols-2 lg:items-center lg:gap-8 lg:pt-[140px]">
+      <div className="relative mx-auto grid max-w-[1200px] gap-12 px-6 pt-36 pb-0 lg:grid-cols-2 lg:items-start lg:gap-8 lg:pt-[140px]">
         {/* Left column */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -587,45 +586,6 @@ export default function Hero({ onRequestAccess }: HeroProps) {
             >
               Request Early Access
             </motion.button>
-
-            {/* Inline email form */}
-            <form onSubmit={handleEmailSubmit} className="flex max-w-[400px]">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your work email"
-                className="w-[260px] rounded-l-[10px] rounded-r-none px-4 py-3 text-sm text-white placeholder:text-white/35 focus:outline-none"
-                style={{
-                  background: "rgba(255,255,255,0.07)",
-                  border: "1px solid rgba(255,255,255,0.14)",
-                  borderRight: "none",
-                }}
-                onFocus={(e) => (e.target.style.borderColor = "#2563EB")}
-                onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.14)")}
-              />
-              <button
-                type="submit"
-                disabled={loading || success}
-                className="flex items-center gap-1.5 rounded-r-[10px] rounded-l-none px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/[0.18]"
-                style={{
-                  background: "rgba(255,255,255,0.12)",
-                  border: "1px solid rgba(255,255,255,0.14)",
-                  borderLeft: "none",
-                }}
-              >
-                {loading ? (
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                ) : success ? (
-                  <>
-                    <CheckCircle className="h-4 w-4" style={{ color: "#0D9488" }} />
-                    <span>Done</span>
-                  </>
-                ) : (
-                  "Get a 30-Minute Demo →"
-                )}
-              </button>
-            </form>
 
             <p className="mt-1 text-xs" style={{ color: "rgba(255,255,255,0.3)" }}>
               No credit card required · Limited early-access seats for pilots
@@ -767,7 +727,7 @@ export default function Hero({ onRequestAccess }: HeroProps) {
           borderTop: "1px solid rgba(255,255,255,0.07)",
         }}
       >
-        <div className="mx-auto grid max-w-[1200px] grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-[1200px] grid-cols-1 sm:grid-cols-3">
           {stats.map((stat, i) => (
             <div
               key={i}

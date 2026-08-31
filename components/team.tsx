@@ -177,12 +177,12 @@ export default function Team() {
               style={{ backgroundColor: "#0D1526", border: "1px solid rgba(255,255,255,0.08)" }}
             >
               {/* Photo */}
-              <div className="relative w-full" style={{ height: "500px", borderBottom: "1px solid rgba(255,255,255,0.07)", backgroundColor: "#0D1526" }}>
+              <div className="relative w-full overflow-hidden" style={{ aspectRatio: "4/5", borderBottom: "1px solid rgba(255,255,255,0.07)", backgroundColor: "#0D1526" }}>
                 <Image
                   src={m.photo}
                   alt={m.name}
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>

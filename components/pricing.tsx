@@ -289,7 +289,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Check, Lock, Clock, ArrowRight } from "lucide-react"
+import { Check, Lock, ArrowRight } from "lucide-react"
 
 const plans = [
   {
@@ -365,7 +365,7 @@ export default function Pricing() {
   return (
     <section id="pricing" style={{ backgroundColor: "#F2F5FA" }} className="py-24 lg:py-[100px]">
       <div className="mx-auto max-w-[1200px] px-6">
-        {/* Coming Soon badge */}
+        {/* Early access badge */}
         <motion.div
           className="mb-6 flex justify-center"
           initial={{ opacity: 0 }}
@@ -376,13 +376,13 @@ export default function Pricing() {
           <div
             className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5"
             style={{
-              background: "rgba(245,158,11,0.1)",
-              border: "1px solid rgba(245,158,11,0.25)",
+              background: "rgba(37,99,235,0.1)",
+              border: "1px solid rgba(37,99,235,0.25)",
             }}
           >
-            <Clock className="h-[13px] w-[13px]" style={{ color: "#F59E0B" }} />
-            <span className="text-xs font-semibold" style={{ color: "#D97706" }}>
-              Launching April 2026
+            <Check className="h-[13px] w-[13px]" style={{ color: "#2563EB" }} />
+            <span className="text-xs font-semibold" style={{ color: "#2563EB" }}>
+              Founding member pricing — available now
             </span>
           </div>
         </motion.div>

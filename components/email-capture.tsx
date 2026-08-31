@@ -181,37 +181,13 @@
 
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Mail, Loader2, CheckCircle } from "lucide-react"
 import { toast } from "sonner"
 import { submitWaitlistEmail } from "@/lib/supabase"
 
-function useCountdown(targetISO: string) {
-  const targetRef = useRef(new Date(targetISO).getTime())
-  const [time, setTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-
-  useEffect(() => {
-    const calc = () => {
-      const now = Date.now()
-      const diff = Math.max(0, targetRef.current - now)
-      setTime({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / (1000 * 60)) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
-      })
-    }
-    calc()
-    const id = setInterval(calc, 1000)
-    return () => clearInterval(id)
-  }, []) // no dependency on target — ref is stable
-
-  return time
-}
-
 export default function EmailCapture() {
-  const countdown = useCountdown("2026-04-01")
   const [email, setEmail] = useState("")
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -233,49 +209,28 @@ export default function EmailCapture() {
     }
   }
 
-  const units = [
-    { value: countdown.days, label: "Days" },
-    { value: countdown.hours, label: "Hours" },
-    { value: countdown.minutes, label: "Minutes" },
-    { value: countdown.seconds, label: "Seconds" },
-  ]
-
   return (
     <section style={{ background: "linear-gradient(180deg, #070D1A 0%, #03070F 100%)" }} className="py-24 lg:py-[100px]">
       <div className="mx-auto max-w-[1200px] px-6">
-        {/* Countdown */}
+        {/* Status */}
         <motion.div
-          className="text-center"
+          className="flex justify-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-sm font-semibold" style={{ color: "rgba(255,255,255,0.45)" }}>
-            Launching Public Beta
-          </p>
-          <p className="mt-1 text-sm" style={{ color: "rgba(255,255,255,0.3)" }}>
-            April 1, 2026
-          </p>
-
-          <div className="mt-6 flex justify-center gap-3">
-            {units.map((u, i) => (
-              <div
-                key={i}
-                className="flex h-[76px] w-[76px] flex-col items-center justify-center rounded-xl"
-                style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                }}
-              >
-                <span className="text-white" style={{ fontSize: "1.9rem", fontWeight: 900, letterSpacing: "-0.04em" }}>
-                  {String(u.value).padStart(2, "0")}
-                </span>
-                <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.07em]" style={{ color: "rgba(255,255,255,0.3)" }}>
-                  {u.label}
-                </span>
-              </div>
-            ))}
+          <div
+            className="inline-flex items-center gap-2 rounded-full px-4 py-2"
+            style={{ background: "rgba(37,99,235,0.1)", border: "1px solid rgba(37,99,235,0.25)" }}
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" style={{ background: "#2563EB" }} />
+              <span className="relative inline-flex h-2 w-2 rounded-full" style={{ background: "#2563EB" }} />
+            </span>
+            <span className="text-sm font-semibold" style={{ color: "#60A5FA" }}>
+              Now accepting early access requests
+            </span>
           </div>
         </motion.div>
 
